@@ -67,9 +67,8 @@
       <a href="#services">Services</a>
       <a href="#process">Process</a>
       <a href="booking.html">Booking</a>
-      <a href="#contact" style="text-decoration: none;" class="contact-btn">
-        <i class="fas fa-paper-plane"></i> Contact
-      </a>
+      <a href="#contact"><i class="fas fa-paper-plane"></i> Contact</a>
+
     </div>
   </nav>
 
@@ -86,17 +85,15 @@
         <div class="badge-icon">
           <i class="fas fa-award" style="color: white; font-size: 0.7rem;"></i>
         </div>
-        <span class="badge-text">Award Winning Designer</span>
+        <span class="badge-text">Graphic Designer</span>
       </div>
 
       <!-- Name Title -->
       <h1 class="name-title"><span>HAYDER</span> <span>AHMEDIN</span></h1>
-
       <!-- Dynamic Typing Text -->
       <div class="typing-text">
         <span class="profession" id="profession"></span>
       </div>
-
       <!-- Hero Description -->
       <p class="hero-description">
         I transform ideas into <strong>visually stunning brand experiences</strong>.
@@ -106,9 +103,6 @@
 
       <!-- CTA Buttons -->
       <div class="cta-buttons">
-        <a href="#work" style="text-decoration: none;" class="btn btn-primary">
-          <i class="fas fa-eye"></i> View Portfolio
-        </a>
         <a href="#contact" style="text-decoration: none;" class="btn btn-secondary">
           <i class="fas fa-paper-plane"></i> Contact Me
         </a>
@@ -122,7 +116,7 @@
     </div>
   </section>
 
-  
+
   <!-- About Section -->
   <section class="about-section" id="about">
     <div class="about-container">
@@ -219,13 +213,16 @@
   <!-- === GRAPHIC DESIGN SKILLS SECTION === -->
   <section class="design-skills" id="skill">
     <div class="container">
-      <div class="services-header">
-        <h2 class="section-title">
-          <span class="title-word">Design</span>
-          <span class="title-word">Expertise</span>
+      <div class="section-header text-center mb-10">
+        <h2 class="headline text-4xl font-bold tracking-tight text-gray-900">
+          <span class="highlight text-blue-600">Design</span>
+          <span class="highlight text-black">Expertise</span>
         </h2>
-        <p class="section-subtitle">Creative tools & visual skills that bring ideas to life</p>
+        <p class="subtitle mt-4 text-lg text-gray-600">
+          Creative tools & visual skills that bring ideas to life
+        </p>
       </div>
+
       <!-- Skills Matrix -->
       <div class="skills-matrix">
         <!-- Left Column - Visual Skills -->
@@ -539,367 +536,7 @@
       </div>
   </section>
 
-  <style>
-    /* === GRAPHIC DESIGN SKILLS STYLES === */
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
-    @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css');
 
-    :root {
-      --primary: #6e44ff;
-      /* Purple accent */
-      --primary-light: #9d7aff;
-      /* Lighter purple */
-      --accent: #ff6b6b;
-      /* Coral accent */
-      --dark: #0f172a;
-      /* Dark background */
-      --darker: #020617;
-      /* Even darker */
-      --light: #f8fafc;
-      /* Light text */
-      --gray: #94a3b8;
-      /* Gray text */
-      --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    }
-
-    .design-skills {
-      background: var(--darker);
-      padding: 100px 5%;
-      color: var(--light);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      position: relative;
-      z-index: 2;
-    }
-
-    /* Section Header */
-    .section-header {
-      text-align: center;
-      margin-bottom: 60px;
-    }
-
-    .title {
-      font-size: 2.5rem;
-      margin-bottom: 15px;
-      background: linear-gradient(90deg, var(--primary), var(--accent));
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent;
-      display: inline-block;
-    }
-
-    .subtitle {
-      font-size: 1.1rem;
-      color: var(--gray);
-      max-width: 600px;
-      margin: 0 auto;
-    }
-
-    /* Skills Matrix */
-    .skills-matrix {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 30px;
-    }
-
-    .skills-column {
-      background: rgba(255, 255, 255, 0.03);
-      border-radius: 15px;
-      padding: 30px;
-      border: 1px solid rgba(255, 255, 255, 0.05);
-      transition: var(--transition);
-    }
-
-    .skills-column:hover {
-      border-color: rgba(110, 68, 255, 0.3);
-      transform: translateY(-5px);
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-    }
-
-    .column-title {
-      font-size: 1.3rem;
-      margin-bottom: 25px;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      color: var(--light);
-    }
-
-    .column-title i {
-      color: var(--primary);
-    }
-
-    /* Visual Skills */
-    .skill-progress-card {
-      margin-bottom: 25px;
-    }
-
-    .skill-header {
-      display: flex;
-      align-items: center;
-      margin-bottom: 10px;
-    }
-
-    .skill-icon {
-      width: 36px;
-      height: 36px;
-      background: rgba(110, 68, 255, 0.1);
-      border-radius: 8px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-right: 15px;
-      color: var(--primary);
-    }
-
-    .skill-header h4 {
-      flex-grow: 1;
-      font-size: 1rem;
-      font-weight: 500;
-    }
-
-    .skill-percent {
-      color: var(--primary-light);
-      font-weight: 600;
-    }
-
-    .progress-track {
-      height: 6px;
-      background: rgba(255, 255, 255, 0.1);
-      border-radius: 3px;
-      overflow: hidden;
-    }
-
-    .progress-bar {
-      height: 100%;
-      background: linear-gradient(90deg, var(--primary), var(--accent));
-      border-radius: 3px;
-      transition: width 1s ease-out;
-    }
-
-    /* Software Skills */
-    .software-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 20px;
-    }
-
-    .software-card {
-      display: flex;
-      align-items: center;
-      gap: 15px;
-      padding: 15px;
-      background: rgba(255, 255, 255, 0.05);
-      border-radius: 10px;
-      transition: var(--transition);
-    }
-
-    .software-card:hover {
-      background: rgba(110, 68, 255, 0.1);
-      transform: translateY(-3px);
-    }
-
-    .software-logo img {
-      width: 30px;
-      height: 30px;
-      object-fit: contain;
-    }
-
-    .software-info {
-      flex-grow: 1;
-    }
-
-    .software-info h4 {
-      font-size: 0.9rem;
-      margin-bottom: 5px;
-    }
-
-    .skill-dots {
-      display: flex;
-      gap: 4px;
-    }
-
-    .dot {
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
-      background: rgba(255, 255, 255, 0.1);
-    }
-
-    .dot.active {
-      background: var(--primary);
-    }
-
-    /* Specialties */
-    .specialty-tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-bottom: 30px;
-    }
-
-    .tag {
-      background: rgba(110, 68, 255, 0.1);
-      color: var(--primary-light);
-      padding: 6px 12px;
-      border-radius: 50px;
-      font-size: 0.8rem;
-      transition: var(--transition);
-    }
-
-    .tag:hover {
-      background: var(--primary);
-      color: white;
-      transform: translateY(-2px);
-    }
-
-    /* Certifications */
-    .certifications {
-      margin-top: 30px;
-    }
-
-    .cert-title {
-      font-size: 1rem;
-      margin-bottom: 15px;
-      color: var(--gray);
-      position: relative;
-      padding-bottom: 8px;
-    }
-
-    .cert-title::after {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 30px;
-      height: 2px;
-      background: var(--primary);
-    }
-
-    .cert-card {
-      display: flex;
-      gap: 15px;
-      padding: 15px;
-      background: rgba(255, 255, 255, 0.03);
-      border-radius: 10px;
-      margin-bottom: 15px;
-      transition: var(--transition);
-    }
-
-    .cert-card:hover {
-      background: rgba(110, 68, 255, 0.1);
-    }
-
-    .cert-icon {
-      width: 40px;
-      height: 40px;
-      background: rgba(110, 68, 255, 0.1);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--primary);
-      flex-shrink: 0;
-    }
-
-    .cert-details h5 {
-      font-size: 0.9rem;
-      margin-bottom: 3px;
-    }
-
-    .cert-details p {
-      font-size: 0.8rem;
-      color: var(--gray);
-    }
-
-    /* Decorative Elements */
-    .design-skills::before {
-      content: '';
-      position: absolute;
-      top: -100px;
-      right: -100px;
-      width: 300px;
-      height: 300px;
-      background: radial-gradient(circle, rgba(110, 68, 255, 0.1) 0%, transparent 70%);
-      z-index: 1;
-    }
-
-    /* Responsive Styles */
-    @media (max-width: 992px) {
-      .skills-matrix {
-        grid-template-columns: 1fr;
-      }
-
-      .software-grid {
-        grid-template-columns: repeat(4, 1fr);
-      }
-    }
-
-    @media (max-width: 768px) {
-      .design-skills {
-        padding: 80px 5%;
-      }
-
-      .title {
-        font-size: 2rem;
-      }
-
-      .software-grid {
-        grid-template-columns: 1fr 1fr;
-      }
-    }
-
-    @media (max-width: 480px) {
-      .software-grid {
-        grid-template-columns: 1fr;
-      }
-    }
-  </style>
-
-  <script>
-    // Animation on scroll
-    document.addEventListener('DOMContentLoaded', function () {
-      const skillsSection = document.querySelector('.design-skills');
-      const skillsColumns = document.querySelectorAll('.skills-column');
-
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            // Animate columns
-            skillsColumns.forEach((col, index) => {
-              setTimeout(() => {
-                col.style.opacity = '1';
-                col.style.transform = 'translateY(0)';
-              }, index * 150);
-            });
-
-            // Animate progress bars
-            const progressBars = document.querySelectorAll('.progress-bar');
-            progressBars.forEach(bar => {
-              const width = bar.style.width;
-              bar.style.width = '0';
-              setTimeout(() => {
-                bar.style.width = width;
-              }, 600);
-            });
-          }
-        });
-      }, { threshold: 0.1 });
-
-      skillsColumns.forEach(col => {
-        col.style.opacity = '0';
-        col.style.transform = 'translateY(20px)';
-        col.style.transition = 'all 0.6s ease-out';
-      });
-
-      observer.observe(skillsSection);
-    });
-  </script>
   <section class="portfolio-modern" id="work">
 
     <!-- Background elements -->
@@ -1230,7 +867,7 @@
       </style>
   </section>
   <!-- === HAYDER'S PROCESS SECTION === -->
-  <section class="process-section"  id="process" >
+  <section class="process-section" id="process">
     <div class="particles-container" id="process-particles"></div>
     <div class="process-container">
       <!-- Section Header -->
@@ -5609,7 +5246,51 @@
       });
     });
   </script>
-  <link rel="stylesheet" href="script.js">
+
+
+  <script>
+    //skill animation looding 
+    // Animation on scroll
+    document.addEventListener('DOMContentLoaded', function () {
+      const skillsSection = document.querySelector('.design-skills');
+      const skillsColumns = document.querySelectorAll('.skills-column');
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            // Animate columns
+            skillsColumns.forEach((col, index) => {
+              setTimeout(() => {
+                col.style.opacity = '1';
+                col.style.transform = 'translateY(0)';
+              }, index * 150);
+            });
+
+            // Animate progress bars
+            const progressBars = document.querySelectorAll('.progress-bar');
+            progressBars.forEach(bar => {
+              const width = bar.style.width;
+              bar.style.width = '0';
+              setTimeout(() => {
+                bar.style.width = width;
+              }, 600);
+            });
+          }
+        });
+      }, { threshold: 0.1 });
+
+      skillsColumns.forEach(col => {
+        col.style.opacity = '0';
+        col.style.transform = 'translateY(20px)';
+        col.style.transition = 'all 0.6s ease-out';
+      });
+
+      observer.observe(skillsSection);
+    });
+
+  </script>
+  <script src="script.js" defer></script>
+
 </body>
 
 </html>
