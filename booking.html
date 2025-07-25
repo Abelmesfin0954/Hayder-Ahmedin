@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -50,924 +49,918 @@
 </head>
 
 <body>
-    <!-- Premium Navigation Bar -->
-    <nav class="navbar">
-        <a href="#" class="logo">
-            <span class="logo-gradient">HAYDER</span>
-        </a>
-        
-        <div class="menu-toggle">
-            <div class="hamburger"></div>
+  <!-- Premium Navigation Bar -->
+  <!-- Premium Navigation Bar -->
+  <nav class="navbar">
+    <a href="#" class="logo">
+      <span class="logo-gradient">HAYDER</span>
+    </a>
+
+    <div class="menu-toggle">
+      <div class="hamburger"></div>
+    </div>
+
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="#about">About</a>
+      <a href="#skill">skill</a>
+      <a href="#overview">Portfolio</a>
+      <a href="Services.html">Services</a>
+      <a href="#process">Process</a>
+      <a href="booking.html" class="active">Booking</a>
+      <a href="#contact"><i class="fas fa-paper-plane"></i> Contact</a>
+
+    </div>
+  </nav>
+  <!-- === HAYDER'S BOOKING SECTION WITH WEB3FORMS === -->
+  <section class="booking-section">
+    <div class="particles-container" id="booking-particles"></div>
+    <div class="booking-container">
+      <!-- Section Header -->
+      <div class="booking-header">
+        <h2 class="section-title">
+          <span class="title-word">Schedule</span>
+          <span class="title-word">A Call</span>
+        </h2>
+        <p class="section-subtitle">Book a consultation to discuss your project</p>
+      </div>
+
+      <div class="booking-content">
+        <!-- Booking Form with Web3Forms API -->
+        <div class="booking-form-container">
+          <form class="booking-form" action="https://api.web3forms.com/submit" method="POST">
+            <input type="hidden" name="access_key" value="e61d29a9-972f-4a48-86a6-b4f2d951f7e4">
+            <input type="hidden" name="subject" value="New Booking Request from Hayder Website ">
+            <input type="hidden" name="redirect" value="https://yourdomain.com/thank-you">
+            <input type="hidden" name="from_name" value="Hayder Ahmedin Booking">
+            <input type="checkbox" name="botcheck" style="display: none;">
+
+
+            <div class="form-group">
+              <input type="text" id="booking-name" name="name" required>
+              <label for="booking-name">Your Name</label>
+              <div class="underline"></div>
+            </div>
+
+            <div class="form-group">
+              <input type="email" id="booking-email" name="email" required>
+              <label for="booking-email">Email Address</label>
+              <div class="underline"></div>
+            </div>
+
+            <div class="form-group">
+              <input type="tel" id="booking-phone" name="phone">
+              <label for="booking-phone">Phone (optional for SMS updates)</label>
+              <div class="underline"></div>
+            </div>
+
+            <div class="form-group">
+              <select id="booking-service" name="service" required>
+                <option value="" disabled selected></option>
+                <option value="ui-ux">UI/UX Design</option>
+                <option value="web-dev">Packaging</option>
+                <option value="branding">Brand Identity</option>
+                <option value="consulting">Consulting</option>
+                <option value="other">Other</option>
+              </select>
+              <label for="booking-service">Service Needed</label>
+              <div class="underline"></div>
+            </div>
+
+            <div class="form-group">
+              <input type="date" id="booking-date" name="date" required>
+              <label for="booking-date">Select Date</label>
+              <div class="underline"></div>
+            </div>
+
+            <div class="form-group">
+              <select id="booking-time" name="time" required>
+                <option value="" disabled selected></option>
+                <option value="09:00 AM">09:00 AM</option>
+                <option value="10:30 AM">10:30 AM</option>
+                <option value="12:00 PM">12:00 PM</option>
+                <option value="02:00 PM">02:00 PM</option>
+                <option value="03:30 PM">03:30 PM</option>
+                <option value="05:00 PM">05:00 PM</option>
+              </select>
+              <label for="booking-time">Select Time</label>
+              <div class="underline"></div>
+            </div>
+
+            <div class="form-group">
+              <textarea id="booking-message" name="message" rows="3"></textarea>
+              <label for="booking-message">Project Details (optional)</label>
+              <div class="underline"></div>
+            </div>
+
+            <button type="submit" class="submit-btn">
+              <span>Confirm Booking</span>
+              <i class="fas fa-calendar-check"></i>
+            </button>
+
+            <div id="form-result" class="form-result"></div>
+          </form>
         </div>
-        
-        <div class="nav-links">
-            <a href="index.html">Home</a>
-            <a href="#work">Portfolio</a>
-            <a href="#about">About</a>
-            <a href="#services">Services</a>
-            <a href="#process" >Process</a>
-            <a href="booking.html"  class="active">booking</a>
-            <a href="#contact" class="contact-btn">
-                <i class="fas fa-paper-plane"></i> Contact
+
+        <!-- Booking Info -->
+        <div class="booking-info">
+          <div class="info-card">
+            <div class="info-icon">
+              <i class="fas fa-clock"></i>
+            </div>
+            <div class="info-content">
+              <h4>Session Duration</h4>
+              <p>30-45 minute video call</p>
+            </div>
+          </div>
+
+          <div class="info-card">
+            <div class="info-icon">
+              <i class="fas fa-video"></i>
+            </div>
+            <div class="info-content">
+              <h4>Meeting Platform</h4>
+              <p>Google Meet or Zoom</p>
+              <p>Link provided after booking</p>
+            </div>
+          </div>
+
+          <div class="info-card">
+            <div class="info-icon">
+              <i class="fas fa-lightbulb"></i>
+            </div>
+            <div class="info-content">
+              <h4>Preparation Tips</h4>
+              <p>Have your project goals ready</p>
+              <p>Share any relevant materials</p>
+            </div>
+          </div>
+
+          <div class="booking-cta">
+            <p>Need immediate assistance?</p>
+            <a href="mailto:hayderahmedin16@gmail.com" class="email-link">
+              <i class="fas fa-envelope"></i>
+              <span>Email Me</span>
             </a>
-        </div>
-    </nav>
-
-
-
-
-
-
-
-
-
-<!-- === HAYDER'S BOOKING SECTION WITH WEB3FORMS === -->
-<section class="booking-section">
-  <div class="particles-container" id="booking-particles"></div>
-  <div class="booking-container">
-    <!-- Section Header -->
-    <div class="booking-header">
-      <h2 class="section-title">
-        <span class="title-word">Schedule</span>
-        <span class="title-word">A Call</span>
-      </h2>
-      <p class="section-subtitle">Book a consultation to discuss your project</p>
-    </div>
-
-    <div class="booking-content">
-      <!-- Booking Form with Web3Forms API -->
-      <div class="booking-form-container">
-        <form class="booking-form" action="https://api.web3forms.com/submit" method="POST">
-          <input type="hidden" name="access_key" value="e61d29a9-972f-4a48-86a6-b4f2d951f7e4">
-          <input type="hidden" name="subject" value="New Booking Request from Website">
-          <input type="hidden" name="redirect" value="https://yourdomain.com/thank-you">
-          <input type="hidden" name="from_name" value="Hayder Ahmedin Booking">
-          <input type="checkbox" name="botcheck" style="display: none;">
-          
-          <!-- SMS Notification Setup -->
-          <input type="hidden" name="sms_notification" value="yes">
-          <input type="hidden" name="sms_to" value="+1234567890"> <!-- Hayder's phone -->
-          <input type="hidden" name="sms_message" value="New booking: {name} - {service} on {date} at {time}">
-
-          <div class="form-group">
-            <input type="text" id="booking-name" name="name" required>
-            <label for="booking-name">Your Name</label>
-            <div class="underline"></div>
           </div>
-          
-          <div class="form-group">
-            <input type="email" id="booking-email" name="email" required>
-            <label for="booking-email">Email Address</label>
-            <div class="underline"></div>
-          </div>
-          
-          <div class="form-group">
-            <input type="tel" id="booking-phone" name="phone">
-            <label for="booking-phone">Phone (optional for SMS updates)</label>
-            <div class="underline"></div>
-          </div>
-          
-          <div class="form-group">
-            <select id="booking-service" name="service" required>
-              <option value="" disabled selected></option>
-              <option value="ui-ux">UI/UX Design</option>
-              <option value="web-dev">Web Development</option>
-              <option value="branding">Brand Identity</option>
-              <option value="consulting">Consulting</option>
-              <option value="other">Other</option>
-            </select>
-            <label for="booking-service">Service Needed</label>
-            <div class="underline"></div>
-          </div>
-          
-          <div class="form-group">
-            <input type="date" id="booking-date" name="date" required>
-            <label for="booking-date">Select Date</label>
-            <div class="underline"></div>
-          </div>
-          
-          <div class="form-group">
-            <select id="booking-time" name="time" required>
-              <option value="" disabled selected></option>
-              <option value="09:00 AM">09:00 AM</option>
-              <option value="10:30 AM">10:30 AM</option>
-              <option value="12:00 PM">12:00 PM</option>
-              <option value="02:00 PM">02:00 PM</option>
-              <option value="03:30 PM">03:30 PM</option>
-              <option value="05:00 PM">05:00 PM</option>
-            </select>
-            <label for="booking-time">Select Time</label>
-            <div class="underline"></div>
-          </div>
-          
-          <div class="form-group">
-            <textarea id="booking-message" name="message" rows="3"></textarea>
-            <label for="booking-message">Project Details (optional)</label>
-            <div class="underline"></div>
-          </div>
-          
-          <button type="submit" class="submit-btn">
-            <span>Confirm Booking</span>
-            <i class="fas fa-calendar-check"></i>
-          </button>
-          
-          <div id="form-result" class="form-result"></div>
-        </form>
-      </div>
-
-      <!-- Booking Info -->
-      <div class="booking-info">
-        <div class="info-card">
-          <div class="info-icon">
-            <i class="fas fa-clock"></i>
-          </div>
-          <div class="info-content">
-            <h4>Session Duration</h4>
-            <p>30-45 minute video call</p>
-          </div>
-        </div>
-        
-        <div class="info-card">
-          <div class="info-icon">
-            <i class="fas fa-video"></i>
-          </div>
-          <div class="info-content">
-            <h4>Meeting Platform</h4>
-            <p>Google Meet or Zoom</p>
-            <p>Link provided after booking</p>
-          </div>
-        </div>
-        
-        <div class="info-card">
-          <div class="info-icon">
-            <i class="fas fa-lightbulb"></i>
-          </div>
-          <div class="info-content">
-            <h4>Preparation Tips</h4>
-            <p>Have your project goals ready</p>
-            <p>Share any relevant materials</p>
-          </div>
-        </div>
-        
-        <div class="booking-cta">
-          <p>Need immediate assistance?</p>
-          <a href="mailto:hayderahmedin16@gmail.com" class="email-link">
-            <i class="fas fa-envelope"></i>
-            <span>Email Me</span>
-          </a>
         </div>
       </div>
     </div>
-  </div>
-</section>
-
-<style>
-  /* === HAYDER'S BOOKING STYLES === */
-  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@600;700&display=swap');
-  @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css');
-
-  :root {
-    --primary: #6e44ff;
-    --primary-light: #9d7aff;
-    --primary-dark: #4d2db7;
-    --accent: #ff6b6b;
-    --accent-light: #ff8e8e;
-    --dark: #0f172a;
-    --darker: #020617;
-    --light: #f8fafc;
-    --lighter: #ffffff;
-    --gray: #94a3b8;
-    --gray-light: #cbd5e1;
-    --gray-dark: #475569;
-    --transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  }
-
-  .booking-section {
-    background: var(--darker);
-    padding: 140px 5%;
-    position: relative;
-    font-family: 'Inter', sans-serif;
-    overflow: hidden;
-  }
-
-  .particles-container {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-  }
-
-  .booking-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    position: relative;
-    z-index: 2;
-  }
-
-  /* Section Header */
-  .booking-header {
-    text-align: center;
-    margin-bottom: 80px;
-  }
-
-  .section-title {
-    font-size: clamp(2.8rem, 5vw, 4rem);
-    margin-bottom: 15px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 15px;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 700;
-    line-height: 1.1;
-  }
-
-  .title-word {
-    background: linear-gradient(90deg, var(--primary), var(--accent));
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-    display: inline-block;
-    text-shadow: 0 2px 10px rgba(110, 68, 255, 0.2);
-  }
-
-  .section-subtitle {
-    font-size: 1.25rem;
-    color: var(--gray);
-    max-width: 600px;
-    margin: 0 auto;
-    line-height: 1.6;
-  }
-
-  /* Booking Content */
-  .booking-content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 60px;
-  }
-/* === ENHANCED BOOKING FORM STYLES === */
-.booking-form {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem; /* Increased gap for better spacing */
-  padding: 1.5rem;
-  background: rgba(255, 255, 255, 0.03);
-  border-radius: 1rem;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  backdrop-filter: blur(10px);
-  transition: var(--transition);
-}
-
-.booking-form:hover {
-  border-color: rgba(110, 68, 255, 0.3);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-}
-
-.form-group {
-  position: relative;
-  margin-bottom: 1.5rem;
-}
-
-.booking-form input,
-.booking-form select,
-.booking-form textarea {
-  width: 100%;
-  padding: 1rem 0;
-  background: transparent;
-  border: none;
-  border-bottom: 1px solid var(--gray-dark);
-  color: var(--light);
-  font-size: 1rem;
-  font-family: 'Inter', sans-serif;
-  transition: var(--transition);
-}
-
-.booking-form select {
-  appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  cursor: pointer;
-  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%2394a3b8'%3e%3cpath d='M7 10l5 5 5-5z'/%3e%3c/svg%3e");
-  background-repeat: no-repeat;
-  background-position: right center;
-  background-size: 1.5rem;
-}
-
-.booking-form textarea {
-  resize: vertical;
-  min-height: 120px;
-  line-height: 1.6;
-}
-
-.booking-form label {
-  position: absolute;
-  top: 1rem;
-  left: 0;
-  color: var(--gray);
-  pointer-events: none;
-  transition: var(--transition);
-  font-size: 1rem;
-  transform-origin: left center;
-}
-
-.underline {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 0;
-  height: 2px;
-  background: linear-gradient(90deg, var(--primary), var(--accent));
-  transition: var(--transition);
-  z-index: 2;
-}
-
-/* === ENHANCED BOOKING FORM FIELD STYLES === */
-.form-group {
-  position: relative;
-  margin-bottom: 2rem;
-}
-
-/* Select Dropdown Styles */
-select {
-  width: 100%;
-  padding: 1rem 0;
-  background: transparent;
-  border: none;
-  border-bottom: 1px solid var(--gray-dark);
-  color: var(--light);
-  font-size: 1rem;
-  font-family: 'Inter', sans-serif;
-  transition: var(--transition);
-  appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  cursor: pointer;
-  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%2394a3b8'%3e%3cpath d='M7 10l5 5 5-5z'/%3e%3c/svg%3e");
-  background-repeat: no-repeat;
-  background-position: right center;
-  background-size: 1.5rem;
-  z-index: 2;
-  position: relative;
-}
-
-select:focus {
-  outline: none;
-  border-bottom-color: transparent;
-}
-
-/* Date Input Styles */
-input[type="date"] {
-  width: 100%;
-  padding: 1rem 0;
-  background: transparent;
-  border: none;
-  border-bottom: 1px solid var(--gray-dark);
-  color: var(--light);
-  font-size: 1rem;
-  font-family: 'Inter', sans-serif;
-  transition: var(--transition);
-  cursor: pointer;
-}
-
-input[type="date"]:focus {
-  outline: none;
-  border-bottom-color: transparent;
-}
-
-/* Custom Calendar Icon */
-input[type="date"]::-webkit-calendar-picker-indicator {
-  filter: invert(0.6);
-  cursor: pointer;
-  padding: 0.5rem;
-  transition: var(--transition);
-  opacity: 0.8;
-}
-
-input[type="date"]::-webkit-calendar-picker-indicator:hover {
-  filter: invert(0.8);
-  opacity: 1;
-}
-
-/* Labels */
-label {
-  position: absolute;
-  top: 1rem;
-  left: 0;
-  color: var(--gray);
-  pointer-events: none;
-  transition: var(--transition);
-  font-size: 1rem;
-  transform-origin: left center;
-}
-
-/* Underline Animation */
-.underline {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 0;
-  height: 2px;
-  background: linear-gradient(90deg, var(--primary), var(--accent));
-  transition: var(--transition);
-  z-index: 3;
-}
-
-/* Focus States */
-select:focus ~ label,
-input[type="date"]:focus ~ label,
-select:valid ~ label,
-input[type="date"]:valid ~ label {
-  top: -0.5rem;
-  transform: scale(0.85);
-  color: var(--primary-light);
-}
-
-select:focus ~ .underline,
-input[type="date"]:focus ~ .underline {
-  width: 100%;
-}
-
-/* Placeholder Handling */
-select:required:invalid {
-  color: var(--gray);
-}
-option[value=""][disabled] {
-  display: none;
-}
-option {
-  color: var(--dark);
-}
-
-/* Dropdown Arrow Animation */
-select {
-  transition: background-image 0.3s ease;
-}
-select:focus {
-  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%236e44ff'%3e%3cpath d='M7 10l5 5 5-5z'/%3e%3c/svg%3e");
-}
-
-/* Time Slot Hover Effects */
-option:hover {
-  background: var(--primary-light);
-  color: white;
-}
-
-/* Responsive Adjustments */
-@media (max-width: 768px) {
-  .form-group {
-    margin-bottom: 1.5rem;
-  }
-  
-  select,
-  input[type="date"] {
-    padding: 0.8rem 0;
-    font-size: 0.9rem;
-  }
-  
-  label {
-    font-size: 0.9rem;
-    top: 0.8rem;
-  }
-  
-  select:focus ~ label,
-  input[type="date"]:focus ~ label {
-    top: -0.8rem;
-  }
-}
-/* Focus States */
-.booking-form input:focus,
-.booking-form select:focus,
-.booking-form textarea:focus {
-  outline: none;
-  border-bottom-color: transparent;
-}
-
-.booking-form input:focus ~ label,
-.booking-form select:focus ~ label,
-.booking-form textarea:focus ~ label,
-.booking-form input:not(:placeholder-shown) ~ label,
-.booking-form select:valid ~ label,
-.booking-form textarea:not(:placeholder-shown) ~ label {
-  top: -0.5rem;
-  transform: scale(0.85);
-  color: var(--primary-light);
-}
-
-.booking-form input:focus ~ .underline,
-.booking-form select:focus ~ .underline,
-.booking-form textarea:focus ~ .underline {
-  width: 100%;
-}
-
-/* Date Picker Enhancement */
-input[type="date"]::-webkit-calendar-picker-indicator {
-  filter: invert(0.6);
-  cursor: pointer;
-  transition: var(--transition);
-  padding: 0.5rem;
-}
-
-input[type="date"]::-webkit-calendar-picker-indicator:hover {
-  filter: invert(0.8);
-}
-
-/* Placeholder Styling */
-.booking-form ::placeholder {
-  color: transparent;
-}
-
-/* Error State */
-.form-group.error input,
-.form-group.error select,
-.form-group.error textarea {
-  border-bottom-color: var(--accent);
-}
-
-.form-group.error .underline {
-  background: var(--accent);
-}
-
-.form-group.error label {
-  color: var(--accent);
-}
-
-/* Success State */
-.form-group.success input,
-.form-group.success select,
-.form-group.success textarea {
-  border-bottom-color: #2ecc71;
-}
-
-.form-group.success .underline {
-  background: #2ecc71;
-}
-
-/* Responsive Adjustments */
-@media (max-width: 768px) {
-  .booking-form {
-    gap: 1.5rem;
-    padding: 1rem;
-  }
-  
-  .booking-form label {
-    font-size: 0.9rem;
-  }
-  
-  .booking-form input:focus ~ label,
-  .booking-form select:focus ~ label,
-  .booking-form textarea:focus ~ label {
-    top: -0.8rem;
-  }
-}
-
-  /* Datepicker */
-  .datepicker-container {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    background: var(--darker);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 12px;
-    padding: 20px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-    z-index: 10;
-    display: none;
-  }
-
-  /* Time Slots */
-  .time-slots {
-    margin-top: 20px;
-  }
-
-  .time-slots h4 {
-    color: var(--light);
-    margin-bottom: 15px;
-    font-size: 1.1rem;
-  }
-
-  .slot-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 12px;
-  }
-
-  .time-slot {
-    background: rgba(110, 68, 255, 0.1);
-    border: 1px solid rgba(110, 68, 255, 0.3);
-    color: var(--primary-light);
-    padding: 10px;
-    border-radius: 8px;
-    font-size: 0.9rem;
-    font-weight: 500;
-    cursor: pointer;
-    transition: var(--transition);
-  }
-
-  .time-slot:hover {
-    background: var(--primary);
-    color: white;
-    transform: translateY(-2px);
-  }
-
-  .time-slot.selected {
-    background: var(--primary);
-    color: white;
-    border-color: var(--primary);
-    box-shadow: 0 5px 15px rgba(110, 68, 255, 0.3);
-  }
-
-  /* Submit Button */
-  .submit-btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 12px;
-    background: linear-gradient(90deg, var(--primary), var(--accent));
-    color: white;
-    border: none;
-    padding: 16px 32px;
-    border-radius: 50px;
-    font-size: 1rem;
-    font-weight: 600;
-    cursor: pointer;
-    transition: var(--transition);
-    margin-top: 20px;
-    width: 100%;
-    justify-content: center;
-  }
-
-  .submit-btn i {
-    font-size: 1rem;
-    transition: var(--transition);
-  }
-
-  .submit-btn:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 15px 40px rgba(110, 68, 255, 0.4);
-  }
-
-  .submit-btn:hover i {
-    transform: rotate(10deg);
-  }
-
-  /* Booking Info */
-  .booking-info {
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-  }
-
-  .info-card {
-    display: flex;
-    gap: 20px;
-    align-items: flex-start;
-    background: rgba(255, 255, 255, 0.03);
-    border-radius: 16px;
-    padding: 30px;
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    transition: var(--transition);
-    backdrop-filter: blur(5px);
-  }
-
-  .info-card:hover {
-    border-color: var(--primary);
-    transform: translateY(-5px);
-  }
-
-  .info-icon {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    background: rgba(110, 68, 255, 0.1);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-    transition: var(--transition);
-  }
-
-  .info-card:hover .info-icon {
-    background: var(--primary);
-  }
-
-  .info-icon i {
-    font-size: 1.2rem;
-    color: var(--primary-light);
-    transition: var(--transition);
-  }
-
-  .info-card:hover .info-icon i {
-    color: white;
-  }
-
-  .info-content h4 {
-    color: var(--light);
-    margin-bottom: 8px;
-    font-size: 1.1rem;
-  }
-
-  .info-content p {
-    color: var(--gray-light);
-    font-size: 0.95rem;
-    line-height: 1.6;
-    margin-bottom: 5px;
-  }
-
-  /* Booking CTA */
-  .booking-cta {
-    background: rgba(255, 107, 107, 0.1);
-    border-radius: 16px;
-    padding: 30px;
-    border: 1px solid rgba(255, 107, 107, 0.2);
-    text-align: center;
-    transition: var(--transition);
-  }
-
-  .booking-cta:hover {
-    border-color: var(--accent);
-    transform: translateY(-5px);
-  }
-
-  .booking-cta p {
-    color: var(--gray-light);
-    margin-bottom: 15px;
-  }
-
-  .email-link {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    color: var(--accent-light);
-    font-weight: 600;
-    text-decoration: none;
-    transition: var(--transition);
-  }
-
-  .email-link:hover {
-    color: white;
-    text-shadow: 0 0 10px rgba(255, 107, 107, 0.3);
-  }
-
-  /* Responsive Styles */
-  @media (max-width: 1200px) {
-    .booking-content {
-      gap: 40px;
+  </section>
+
+  <style>
+    /* === HAYDER'S BOOKING STYLES === */
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@600;700&display=swap');
+    @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css');
+
+    :root {
+      --primary: #6e44ff;
+      --primary-light: #9d7aff;
+      --primary-dark: #4d2db7;
+      --accent: #ff6b6b;
+      --accent-light: #ff8e8e;
+      --dark: #0f172a;
+      --darker: #020617;
+      --light: #f8fafc;
+      --lighter: #ffffff;
+      --gray: #94a3b8;
+      --gray-light: #cbd5e1;
+      --gray-dark: #475569;
+      --transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     }
-  }
 
-  @media (max-width: 992px) {
     .booking-section {
-      padding: 120px 5%;
+      background: var(--darker);
+      padding: 140px 5%;
+      position: relative;
+      font-family: 'Inter', sans-serif;
+      overflow: hidden;
     }
-    
+
+    .particles-container {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+    }
+
+    .booking-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 2;
+    }
+
+    /* Section Header */
+    .booking-header {
+      text-align: center;
+      margin-bottom: 80px;
+    }
+
     .section-title {
-      flex-direction: column;
-      gap: 5px;
+      font-size: clamp(2.8rem, 5vw, 4rem);
+      margin-bottom: 15px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 700;
+      line-height: 1.1;
     }
-    
-    .booking-content {
-      grid-template-columns: 1fr;
+
+    .title-word {
+      background: linear-gradient(90deg, var(--primary), var(--accent));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      display: inline-block;
+      text-shadow: 0 2px 10px rgba(110, 68, 255, 0.2);
+    }
+
+    .section-subtitle {
+      font-size: 1.25rem;
+      color: var(--gray);
       max-width: 600px;
       margin: 0 auto;
+      line-height: 1.6;
     }
-  }
 
-  @media (max-width: 768px) {
-    .slot-grid {
-      grid-template-columns: 1fr;
+    /* Booking Content */
+    .booking-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
     }
-    
-    .info-card {
-      padding: 25px;
-    }
-  }
 
-  @media (max-width: 576px) {
-    .section-title {
-      font-size: 2.4rem;
+    /* === ENHANCED BOOKING FORM STYLES === */
+    .booking-form {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      /* Increased gap for better spacing */
+      padding: 1.5rem;
+      background: rgba(255, 255, 255, 0.03);
+      border-radius: 1rem;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(10px);
+      transition: var(--transition);
     }
-    
-    .section-subtitle {
+
+    .booking-form:hover {
+      border-color: rgba(110, 68, 255, 0.3);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    }
+
+    .form-group {
+      position: relative;
+      margin-bottom: 1.5rem;
+    }
+
+    .booking-form input,
+    .booking-form select,
+    .booking-form textarea {
+      width: 100%;
+      padding: 1rem 0;
+      background: transparent;
+      border: none;
+      border-bottom: 1px solid var(--gray-dark);
+      color: var(--light);
+      font-size: 1rem;
+      font-family: 'Inter', sans-serif;
+      transition: var(--transition);
+    }
+
+    .booking-form select {
+      appearance: none;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      cursor: pointer;
+      background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%2394a3b8'%3e%3cpath d='M7 10l5 5 5-5z'/%3e%3c/svg%3e");
+      background-repeat: no-repeat;
+      background-position: right center;
+      background-size: 1.5rem;
+    }
+
+    .booking-form textarea {
+      resize: vertical;
+      min-height: 120px;
+      line-height: 1.6;
+    }
+
+    .booking-form label {
+      position: absolute;
+      top: 1rem;
+      left: 0;
+      color: var(--gray);
+      pointer-events: none;
+      transition: var(--transition);
+      font-size: 1rem;
+      transform-origin: left center;
+    }
+
+    .underline {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: linear-gradient(90deg, var(--primary), var(--accent));
+      transition: var(--transition);
+      z-index: 2;
+    }
+
+    /* === ENHANCED BOOKING FORM FIELD STYLES === */
+    .form-group {
+      position: relative;
+      margin-bottom: 2rem;
+    }
+
+    /* Select Dropdown Styles */
+    select {
+      width: 100%;
+      padding: 1rem 0;
+      background: transparent;
+      border: none;
+      border-bottom: 1px solid var(--gray-dark);
+      color: var(--light);
+      font-size: 1rem;
+      font-family: 'Inter', sans-serif;
+      transition: var(--transition);
+      appearance: none;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      cursor: pointer;
+      background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%2394a3b8'%3e%3cpath d='M7 10l5 5 5-5z'/%3e%3c/svg%3e");
+      background-repeat: no-repeat;
+      background-position: right center;
+      background-size: 1.5rem;
+      z-index: 2;
+      position: relative;
+    }
+
+    select:focus {
+      outline: none;
+      border-bottom-color: transparent;
+    }
+
+    /* Date Input Styles */
+    input[type="date"] {
+      width: 100%;
+      padding: 1rem 0;
+      background: transparent;
+      border: none;
+      border-bottom: 1px solid var(--gray-dark);
+      color: var(--light);
+      font-size: 1rem;
+      font-family: 'Inter', sans-serif;
+      transition: var(--transition);
+      cursor: pointer;
+    }
+
+    input[type="date"]:focus {
+      outline: none;
+      border-bottom-color: transparent;
+    }
+
+    /* Custom Calendar Icon */
+    input[type="date"]::-webkit-calendar-picker-indicator {
+      filter: invert(0.6);
+      cursor: pointer;
+      padding: 0.5rem;
+      transition: var(--transition);
+      opacity: 0.8;
+    }
+
+    input[type="date"]::-webkit-calendar-picker-indicator:hover {
+      filter: invert(0.8);
+      opacity: 1;
+    }
+
+    /* Labels */
+    label {
+      position: absolute;
+      top: 1rem;
+      left: 0;
+      color: var(--gray);
+      pointer-events: none;
+      transition: var(--transition);
+      font-size: 1rem;
+      transform-origin: left center;
+    }
+
+    /* Underline Animation */
+    .underline {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: linear-gradient(90deg, var(--primary), var(--accent));
+      transition: var(--transition);
+      z-index: 3;
+    }
+
+    /* Focus States */
+    select:focus~label,
+    input[type="date"]:focus~label,
+    select:valid~label,
+    input[type="date"]:valid~label {
+      top: -0.5rem;
+      transform: scale(0.85);
+      color: var(--primary-light);
+    }
+
+    select:focus~.underline,
+    input[type="date"]:focus~.underline {
+      width: 100%;
+    }
+
+    /* Placeholder Handling */
+    select:required:invalid {
+      color: var(--gray);
+    }
+
+    option[value=""][disabled] {
+      display: none;
+    }
+
+    option {
+      color: var(--dark);
+    }
+
+    /* Dropdown Arrow Animation */
+    select {
+      transition: background-image 0.3s ease;
+    }
+
+    select:focus {
+      background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%236e44ff'%3e%3cpath d='M7 10l5 5 5-5z'/%3e%3c/svg%3e");
+    }
+
+    /* Time Slot Hover Effects */
+    option:hover {
+      background: var(--primary-light);
+      color: white;
+    }
+
+    /* Responsive Adjustments */
+    @media (max-width: 768px) {
+      .form-group {
+        margin-bottom: 1.5rem;
+      }
+
+      select,
+      input[type="date"] {
+        padding: 0.8rem 0;
+        font-size: 0.9rem;
+      }
+
+      label {
+        font-size: 0.9rem;
+        top: 0.8rem;
+      }
+
+      select:focus~label,
+      input[type="date"]:focus~label {
+        top: -0.8rem;
+      }
+    }
+
+    /* Focus States */
+    .booking-form input:focus,
+    .booking-form select:focus,
+    .booking-form textarea:focus {
+      outline: none;
+      border-bottom-color: transparent;
+    }
+
+    .booking-form input:focus~label,
+    .booking-form select:focus~label,
+    .booking-form textarea:focus~label,
+    .booking-form input:not(:placeholder-shown)~label,
+    .booking-form select:valid~label,
+    .booking-form textarea:not(:placeholder-shown)~label {
+      top: -0.5rem;
+      transform: scale(0.85);
+      color: var(--primary-light);
+    }
+
+    .booking-form input:focus~.underline,
+    .booking-form select:focus~.underline,
+    .booking-form textarea:focus~.underline {
+      width: 100%;
+    }
+
+    /* Date Picker Enhancement */
+    input[type="date"]::-webkit-calendar-picker-indicator {
+      filter: invert(0.6);
+      cursor: pointer;
+      transition: var(--transition);
+      padding: 0.5rem;
+    }
+
+    input[type="date"]::-webkit-calendar-picker-indicator:hover {
+      filter: invert(0.8);
+    }
+
+    /* Placeholder Styling */
+    .booking-form ::placeholder {
+      color: transparent;
+    }
+
+    /* Error State */
+    .form-group.error input,
+    .form-group.error select,
+    .form-group.error textarea {
+      border-bottom-color: var(--accent);
+    }
+
+    .form-group.error .underline {
+      background: var(--accent);
+    }
+
+    .form-group.error label {
+      color: var(--accent);
+    }
+
+    /* Success State */
+    .form-group.success input,
+    .form-group.success select,
+    .form-group.success textarea {
+      border-bottom-color: #2ecc71;
+    }
+
+    .form-group.success .underline {
+      background: #2ecc71;
+    }
+
+    /* Responsive Adjustments */
+    @media (max-width: 768px) {
+      .booking-form {
+        gap: 1.5rem;
+        padding: 1rem;
+      }
+
+      .booking-form label {
+        font-size: 0.9rem;
+      }
+
+      .booking-form input:focus~label,
+      .booking-form select:focus~label,
+      .booking-form textarea:focus~label {
+        top: -0.8rem;
+      }
+    }
+
+    /* Datepicker */
+    .datepicker-container {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      background: var(--darker);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+      z-index: 10;
+      display: none;
+    }
+
+    /* Time Slots */
+    .time-slots {
+      margin-top: 20px;
+    }
+
+    .time-slots h4 {
+      color: var(--light);
+      margin-bottom: 15px;
       font-size: 1.1rem;
     }
-    
-    .booking-form {
-      gap: 25px;
+
+    .slot-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
     }
-  }
-</style>
 
-<style>
-  /* === HAYDER'S BOOKING STYLES === */
-  /* [Previous CSS remains exactly the same, just add these new styles] */
-  
-  .form-result {
-    margin-top: 20px;
-    padding: 15px;
-    border-radius: 8px;
-    text-align: center;
-    display: none;
-  }
-  
-  .form-result.success {
-    background: rgba(46, 204, 113, 0.1);
-    border: 1px solid rgba(46, 204, 113, 0.3);
-    color: #2ecc71;
-  }
-  
-  .form-result.error {
-    background: rgba(231, 76, 60, 0.1);
-    border: 1px solid rgba(231, 76, 60, 0.3);
-    color: #e74c3c;
-  }
-  
-  #booking-phone {
-    width: 100%;
-    padding: 12px 0;
-    background: transparent;
-    border: none;
-    border-bottom: 1px solid var(--gray-dark);
-    color: var(--light);
-    font-size: 1rem;
-    font-family: 'Inter', sans-serif;
-    transition: var(--transition);
-  }
-  
-  #booking-phone:focus {
-    outline: none;
-    border-bottom-color: transparent;
-  }
-  
-  #booking-phone:focus ~ .underline {
-    width: 100%;
-  }
-</style>
+    .time-slot {
+      background: rgba(110, 68, 255, 0.1);
+      border: 1px solid rgba(110, 68, 255, 0.3);
+      color: var(--primary-light);
+      padding: 10px;
+      border-radius: 8px;
+      font-size: 0.9rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: var(--transition);
+    }
 
-<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-<script>
-  // Initialize Web3Forms
-  document.addEventListener('DOMContentLoaded', function() {
-    // Particles.js initialization [same as before]
-    
-    // Form submission handler
-    const form = document.querySelector('.booking-form');
-    const result = document.getElementById('form-result');
-    
-    form.addEventListener('submit', function(e) {
-      e.preventDefault();
-      
-      // Show loading state
-      const submitBtn = form.querySelector('.submit-btn');
-      submitBtn.disabled = true;
-      submitBtn.innerHTML = '<span>Sending...</span><i class="fas fa-spinner fa-spin"></i>';
-      
-      // Get form data
-      const formData = new FormData(form);
-      
-      // Send to Web3Forms
-      fetch(form.action, {
-        method: 'POST',
-        body: formData,
-        headers: {
-          'Accept': 'application/json'
-        }
-      })
-      .then(response => response.json())
-      .then(data => {
-        if (data.success) {
-          result.innerHTML = "Booking request sent successfully! You'll receive confirmation shortly.";
-          result.className = "form-result success";
-          form.reset();
-        } else {
-          result.innerHTML = data.message || "Error sending booking request. Please try again.";
-          result.className = "form-result error";
-        }
-        result.style.display = "block";
-        
-        // Scroll to result
-        result.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-      })
-      .catch(error => {
-        result.innerHTML = "Booking request sent successfully! You'll receive confirmation shortly.";
-        result.className = "form-result success";
-        result.style.display = "block";
-      })
-      .finally(() => {
-        submitBtn.disabled = false;
-        submitBtn.innerHTML = '<span>Confirm Booking</span><i class="fas fa-calendar-check"></i>';
-        
-        // Hide result after 5 seconds
-        setTimeout(() => {
-          result.style.display = "none";
-        }, 5000);
+    .time-slot:hover {
+      background: var(--primary);
+      color: white;
+      transform: translateY(-2px);
+    }
+
+    .time-slot.selected {
+      background: var(--primary);
+      color: white;
+      border-color: var(--primary);
+      box-shadow: 0 5px 15px rgba(110, 68, 255, 0.3);
+    }
+
+    /* Submit Button */
+    .submit-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      background: linear-gradient(90deg, var(--primary), var(--accent));
+      color: white;
+      border: none;
+      padding: 16px 32px;
+      border-radius: 50px;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: var(--transition);
+      margin-top: 20px;
+      width: 100%;
+      justify-content: center;
+    }
+
+    .submit-btn i {
+      font-size: 1rem;
+      transition: var(--transition);
+    }
+
+    .submit-btn:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 40px rgba(110, 68, 255, 0.4);
+    }
+
+    .submit-btn:hover i {
+      transform: rotate(10deg);
+    }
+
+    /* Booking Info */
+    .booking-info {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+    }
+
+    .info-card {
+      display: flex;
+      gap: 20px;
+      align-items: flex-start;
+      background: rgba(255, 255, 255, 0.03);
+      border-radius: 16px;
+      padding: 30px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      transition: var(--transition);
+      backdrop-filter: blur(5px);
+    }
+
+    .info-card:hover {
+      border-color: var(--primary);
+      transform: translateY(-5px);
+    }
+
+    .info-icon {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background: rgba(110, 68, 255, 0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      transition: var(--transition);
+    }
+
+    .info-card:hover .info-icon {
+      background: var(--primary);
+    }
+
+    .info-icon i {
+      font-size: 1.2rem;
+      color: var(--primary-light);
+      transition: var(--transition);
+    }
+
+    .info-card:hover .info-icon i {
+      color: white;
+    }
+
+    .info-content h4 {
+      color: var(--light);
+      margin-bottom: 8px;
+      font-size: 1.1rem;
+    }
+
+    .info-content p {
+      color: var(--gray-light);
+      font-size: 0.95rem;
+      line-height: 1.6;
+      margin-bottom: 5px;
+    }
+
+    /* Booking CTA */
+    .booking-cta {
+      background: rgba(255, 107, 107, 0.1);
+      border-radius: 16px;
+      padding: 30px;
+      border: 1px solid rgba(255, 107, 107, 0.2);
+      text-align: center;
+      transition: var(--transition);
+    }
+
+    .booking-cta:hover {
+      border-color: var(--accent);
+      transform: translateY(-5px);
+    }
+
+    .booking-cta p {
+      color: var(--gray-light);
+      margin-bottom: 15px;
+    }
+
+    .email-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--accent-light);
+      font-weight: 600;
+      text-decoration: none;
+      transition: var(--transition);
+    }
+
+    .email-link:hover {
+      color: white;
+      text-shadow: 0 0 10px rgba(255, 107, 107, 0.3);
+    }
+
+    /* Responsive Styles */
+    @media (max-width: 1200px) {
+      .booking-content {
+        gap: 40px;
+      }
+    }
+
+    @media (max-width: 992px) {
+      .booking-section {
+        padding: 120px 5%;
+      }
+
+      .section-title {
+        flex-direction: column;
+        gap: 5px;
+      }
+
+      .booking-content {
+        grid-template-columns: 1fr;
+        max-width: 600px;
+        margin: 0 auto;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .slot-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .info-card {
+        padding: 25px;
+      }
+    }
+
+    @media (max-width: 576px) {
+      .section-title {
+        font-size: 2.4rem;
+      }
+
+      .section-subtitle {
+        font-size: 1.1rem;
+      }
+
+      .booking-form {
+        gap: 25px;
+      }
+    }
+  </style>
+
+  <style>
+    /* === HAYDER'S BOOKING STYLES === */
+    /* [Previous CSS remains exactly the same, just add these new styles] */
+
+    .form-result {
+      margin-top: 20px;
+      padding: 15px;
+      border-radius: 8px;
+      text-align: center;
+      display: none;
+    }
+
+    .form-result.success {
+      background: rgba(46, 204, 113, 0.1);
+      border: 1px solid rgba(46, 204, 113, 0.3);
+      color: #2ecc71;
+    }
+
+    .form-result.error {
+      background: rgba(231, 76, 60, 0.1);
+      border: 1px solid rgba(231, 76, 60, 0.3);
+      color: #e74c3c;
+    }
+
+    #booking-phone {
+      width: 100%;
+      padding: 12px 0;
+      background: transparent;
+      border: none;
+      border-bottom: 1px solid var(--gray-dark);
+      color: var(--light);
+      font-size: 1rem;
+      font-family: 'Inter', sans-serif;
+      transition: var(--transition);
+    }
+
+    #booking-phone:focus {
+      outline: none;
+      border-bottom-color: transparent;
+    }
+
+    #booking-phone:focus~.underline {
+      width: 100%;
+    }
+  </style>
+
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <script>
+    // Initialize Web3Forms
+    document.addEventListener('DOMContentLoaded', function () {
+      // Particles.js initialization [same as before]
+
+      // Form submission handler
+      const form = document.querySelector('.booking-form');
+      const result = document.getElementById('form-result');
+
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        // Show loading state
+        const submitBtn = form.querySelector('.submit-btn');
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = '<span>Sending...</span><i class="fas fa-spinner fa-spin"></i>';
+
+        // Get form data
+        const formData = new FormData(form);
+
+        // Send to Web3Forms
+        fetch(form.action, {
+          method: 'POST',
+          body: formData,
+          headers: {
+            'Accept': 'application/json'
+          }
+        })
+          .then(response => response.json())
+          .then(data => {
+            if (data.success) {
+              result.innerHTML = "Booking request sent successfully! You'll receive confirmation shortly.";
+              result.className = "form-result success";
+              form.reset();
+            } else {
+              result.innerHTML = data.message || "Error sending booking request. Please try again.";
+              result.className = "form-result error";
+            }
+            result.style.display = "block";
+
+            // Scroll to result
+            result.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+          })
+          .catch(error => {
+            result.innerHTML = "Booking request sent successfully! You'll receive confirmation shortly.";
+            result.className = "form-result success";
+            result.style.display = "block";
+          })
+          .finally(() => {
+            submitBtn.disabled = false;
+            submitBtn.innerHTML = '<span>Confirm Booking</span><i class="fas fa-calendar-check"></i>';
+
+            // Hide result after 5 seconds
+            setTimeout(() => {
+              result.style.display = "none";
+            }, 5000);
+          });
       });
+
+      // [Rest of your existing JavaScript remains the same]
     });
-    
-    // [Rest of your existing JavaScript remains the same]
-  });
-</script>
+  </script>
 
 
 
@@ -1003,967 +996,1032 @@ input[type="date"]::-webkit-calendar-picker-indicator:hover {
 
 
 
-<footer class="dark-footer">
-  <div class="footer-container">
-    <!-- Footer Columns -->
-    <div class="footer-grid">
-      <!-- Column 1 - About -->
-      <div class="footer-col">
-        <h3 class="footer-title">
-          <span class="logo-text">HAYDER AHMEDIN</span>
+  <footer class="dark-footer">
+    <div class="footer-container">
+      <!-- Footer Columns -->
+      <div class="footer-grid">
+        <!-- Column 1 - About -->
+        <div class="footer-col">
+          <h3 class="footer-title">
+            <span class="logo-text">HAYDER AHMEDIN</span>
 
-          <span class="logo-dot"></span>
-        </h3>
-        <p class="footer-about">Creating digital experiences that inspire and transform businesses.</p>
-        <div class="footer-social">
-          <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-          <a href="#" aria-label="Dribbble"><i class="fab fa-dribbble"></i></a>
-          <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-          <a href="#" aria-label="Github"><i class="fab fa-github"></i></a>
+            <span class="logo-dot"></span>
+          </h3>
+          <p class="footer-about">Creating digital experiences that inspire and transform businesses.</p>
+          <div class="footer-social">
+            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" aria-label="Dribbble"><i class="fab fa-dribbble"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" aria-label="Github"><i class="fab fa-github"></i></a>
+          </div>
+        </div>
+
+        <!-- Column 2 - Links -->
+        <div class="footer-col">
+          <h4 class="footer-heading">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Portfolio</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3 - Services -->
+        <div class="footer-col">
+          <h4 class="footer-heading">Services</h4>
+          <ul class="footer-links">
+            <li><a href="#">Web Design</a></li>
+            <li><a href="#">Development</a></li>
+            <li><a href="#">UI/UX</a></li>
+            <li><a href="#">Digital Marketing</a></li>
+            <li><a href="#">Branding</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 4 - Contact -->
+        <div class="footer-col">
+          <h4 class="footer-heading">Contact Info</h4>
+          <ul class="footer-contact">
+            <li>
+              <i class="fas fa-map-marker-alt"></i>
+              <span>1000, Addis Ababa, Ethiopa</span>
+            </li>
+            <li>
+              <i class="fas fa-envelope"></i>
+              <a href="mailto:hayderahmedin16@gmail.com">hayderahmedin16@gmail.com</a>
+            </li>
+            <li>
+              <i class="fas fa-phone-alt"></i>
+              <a href="tel:+251945052858">+251-945052858</a>
+            </li>
+          </ul>
         </div>
       </div>
 
-      <!-- Column 2 - Links -->
-      <div class="footer-col">
-        <h4 class="footer-heading">Quick Links</h4>
-        <ul class="footer-links">
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Services</a></li>
-          <li><a href="#">Portfolio</a></li>
-          <li><a href="#">About Us</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
-      </div>
-
-      <!-- Column 3 - Services -->
-      <div class="footer-col">
-        <h4 class="footer-heading">Services</h4>
-        <ul class="footer-links">
-          <li><a href="#">Web Design</a></li>
-          <li><a href="#">Development</a></li>
-          <li><a href="#">UI/UX</a></li>
-          <li><a href="#">Digital Marketing</a></li>
-          <li><a href="#">Branding</a></li>
-        </ul>
-      </div>
-
-      <!-- Column 4 - Contact -->
-      <div class="footer-col">
-        <h4 class="footer-heading">Contact Info</h4>
-        <ul class="footer-contact">
-          <li>
-            <i class="fas fa-map-marker-alt"></i>
-            <span>1000, Addis Ababa, Ethiopa</span>
-          </li>
-          <li>
-            <i class="fas fa-envelope"></i>
-              <a href="mailto:hayderahmedin16@gmail.com">hayderahmedin16@gmail.com</a>
-          </li>
-          <li>
-            <i class="fas fa-phone-alt"></i>
-              <a href="tel:+251945052858">+251-945052858</a>
-          </li>
-        </ul>
+      <!-- Footer Bottom -->
+      <div class="footer-bottom">
+        <div class="footer-copyright">
+          &copy; 2025 HAYDER AHMEDIN. All rights reserved.
+        </div>
+        <div class="footer-legal">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Cookies</a>
+        </div>
       </div>
     </div>
+  </footer>
 
-    <!-- Footer Bottom -->
-    <div class="footer-bottom">
-      <div class="footer-copyright">
-        &copy; 2025 HAYDER AHMEDIN. All rights reserved.
-      </div>
-      <div class="footer-legal">
-        <a href="#">Privacy Policy</a>
-        <a href="#">Terms of Service</a>
-        <a href="#">Cookies</a>
-      </div>
-    </div>
-  </div>
-</footer>
+  <style>
+    /* === DARK FOOTER STYLES === */
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+    @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css');
 
-<style>
-  /* === DARK FOOTER STYLES === */
-  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
-  @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css');
+    :root {
+      --primary: #2563eb;
+      /* Blue accent */
+      --primary-light: #3b82f6;
+      /* Lighter blue */
+      --dark: #0f172a;
+      /* Dark background */
+      --darker: #020617;
+      /* Even darker */
+      --light: #f8fafc;
+      /* Light text */
+      --gray: #94a3b8;
+      /* Gray text */
+      --transition: all 0.3s ease;
+    }
 
-  :root {
-    --primary: #2563eb;       /* Blue accent */
-    --primary-light: #3b82f6; /* Lighter blue */
-    --dark: #0f172a;         /* Dark background */
-    --darker: #020617;       /* Even darker */
-    --light: #f8fafc;        /* Light text */
-    --gray: #94a3b8;         /* Gray text */
-    --transition: all 0.3s ease;
-  }
-
-  .dark-footer {
-    background: var(--darker);
-    color: var(--light);
-    padding: 80px 0 0;
-    position: relative;
-    overflow: hidden;
-  }
-
-  .footer-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 5%;
-    position: relative;
-    z-index: 2;
-  }
-
-  /* Footer Grid Layout */
-  .footer-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 40px;
-    margin-bottom: 60px;
-  }
-
-  /* Footer Columns */
-  .footer-col {
-    margin-bottom: 30px;
-  }
-
-  /* Logo/Title */
-  .footer-title {
-    display: flex;
-    align-items: center;
-    font-size: 1.5rem;
-    margin-bottom: 20px;
-    color: var(--light);
-  }
-
-  .logo-text {
-    font-weight: 700;
-  }
-
-  .logo-dot {
-    display: inline-block;
-    width: 8px;
-    height: 8px;
-    background: var(--primary);
-    border-radius: 50%;
-    margin-left: 8px;
-  }
-
-  /* About Text */
-  .footer-about {
-    color: var(--gray);
-    line-height: 1.6;
-    margin-bottom: 25px;
-    max-width: 280px;
-  }
-
-  /* Social Links */
-  .footer-social {
-    display: flex;
-    gap: 15px;
-  }
-
-  .footer-social a {
-    width: 36px;
-    height: 36px;
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 0.05);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--gray);
-    transition: var(--transition);
-  }
-
-  .footer-social a:hover {
-    background: var(--primary);
-    color: white;
-    transform: translateY(-3px);
-  }
-
-  /* Footer Headings */
-  .footer-heading {
-    font-size: 1.1rem;
-    color: var(--light);
-    margin-bottom: 20px;
-    position: relative;
-    padding-bottom: 10px;
-  }
-
-  .footer-heading::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 40px;
-    height: 2px;
-    background: var(--primary);
-  }
-
-  /* Footer Links */
-  .footer-links {
-    list-style: none;
-  }
-
-  .footer-links li {
-    margin-bottom: 12px;
-  }
-
-  .footer-links a {
-    color: var(--gray);
-    text-decoration: none;
-    transition: var(--transition);
-    position: relative;
-  }
-
-  .footer-links a::before {
-    content: '';
-    position: absolute;
-    bottom: -2px;
-    left: 0;
-    width: 0;
-    height: 1px;
-    background: var(--primary);
-    transition: var(--transition);
-  }
-
-  .footer-links a:hover {
-    color: var(--light);
-    padding-left: 8px;
-  }
-
-  .footer-links a:hover::before {
-    width: 12px;
-  }
-
-  /* Contact Info */
-  .footer-contact {
-    list-style: none;
-  }
-
-  .footer-contact li {
-    display: flex;
-    align-items: flex-start;
-    margin-bottom: 15px;
-    color: var(--gray);
-  }
-
-  .footer-contact i {
-    color: var(--primary);
-    margin-right: 12px;
-    margin-top: 3px;
-    font-size: 0.9rem;
-  }
-
-  .footer-contact a {
-    color: var(--gray);
-    text-decoration: none;
-    transition: var(--transition);
-  }
-
-  .footer-contact a:hover {
-    color: var(--light);
-    text-decoration: underline;
-  }
-
-  /* Footer Bottom */
-  .footer-bottom {
-    border-top: 1px solid rgba(255, 255, 255, 0.05);
-    padding: 25px 0;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  .footer-copyright {
-    color: var(--gray);
-    font-size: 0.9rem;
-  }
-
-  .footer-legal {
-    display: flex;
-    gap: 20px;
-  }
-
-  .footer-legal a {
-    color: var(--gray);
-    text-decoration: none;
-    font-size: 0.9rem;
-    transition: var(--transition);
-  }
-
-  .footer-legal a:hover {
-    color: var(--light);
-  }
-
-  /* Decorative Elements */
-  .dark-footer::before {
-    content: '';
-    position: absolute;
-    top: -100px;
-    right: -100px;
-    width: 300px;
-    height: 300px;
-    background: radial-gradient(circle, rgba(37, 99, 235, 0.1) 0%, transparent 70%);
-    z-index: 1;
-  }
-
-  /* Responsive Styles */
-  @media (max-width: 768px) {
     .dark-footer {
-      padding: 60px 0 0;
+      background: var(--darker);
+      color: var(--light);
+      padding: 80px 0 0;
+      position: relative;
+      overflow: hidden;
     }
-    
+
+    .footer-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 5%;
+      position: relative;
+      z-index: 2;
+    }
+
+    /* Footer Grid Layout */
     .footer-grid {
-      grid-template-columns: 1fr 1fr;
-      gap: 30px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 40px;
+      margin-bottom: 60px;
     }
-    
-    .footer-bottom {
-      flex-direction: column;
+
+    /* Footer Columns */
+    .footer-col {
+      margin-bottom: 30px;
+    }
+
+    /* Logo/Title */
+    .footer-title {
+      display: flex;
+      align-items: center;
+      font-size: 1.5rem;
+      margin-bottom: 20px;
+      color: var(--light);
+    }
+
+    .logo-text {
+      font-weight: 700;
+    }
+
+    .logo-dot {
+      display: inline-block;
+      width: 8px;
+      height: 8px;
+      background: var(--primary);
+      border-radius: 50%;
+      margin-left: 8px;
+    }
+
+    /* About Text */
+    .footer-about {
+      color: var(--gray);
+      line-height: 1.6;
+      margin-bottom: 25px;
+      max-width: 280px;
+    }
+
+    /* Social Links */
+    .footer-social {
+      display: flex;
       gap: 15px;
+    }
+
+    .footer-social a {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.05);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--gray);
+      transition: var(--transition);
+    }
+
+    .footer-social a:hover {
+      background: var(--primary);
+      color: white;
+      transform: translateY(-3px);
+    }
+
+    /* Footer Headings */
+    .footer-heading {
+      font-size: 1.1rem;
+      color: var(--light);
+      margin-bottom: 20px;
+      position: relative;
+      padding-bottom: 10px;
+    }
+
+    .footer-heading::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 40px;
+      height: 2px;
+      background: var(--primary);
+    }
+
+    /* Footer Links */
+    .footer-links {
+      list-style: none;
+    }
+
+    .footer-links li {
+      margin-bottom: 12px;
+    }
+
+    .footer-links a {
+      color: var(--gray);
+      text-decoration: none;
+      transition: var(--transition);
+      position: relative;
+    }
+
+    .footer-links a::before {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 0;
+      height: 1px;
+      background: var(--primary);
+      transition: var(--transition);
+    }
+
+    .footer-links a:hover {
+      color: var(--light);
+      padding-left: 8px;
+    }
+
+    .footer-links a:hover::before {
+      width: 12px;
+    }
+
+    /* Contact Info */
+    .footer-contact {
+      list-style: none;
+    }
+
+    .footer-contact li {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 15px;
+      color: var(--gray);
+    }
+
+    .footer-contact i {
+      color: var(--primary);
+      margin-right: 12px;
+      margin-top: 3px;
+      font-size: 0.9rem;
+    }
+
+    .footer-contact a {
+      color: var(--gray);
+      text-decoration: none;
+      transition: var(--transition);
+    }
+
+    .footer-contact a:hover {
+      color: var(--light);
+      text-decoration: underline;
+    }
+
+    /* Footer Bottom */
+    .footer-bottom {
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
+      padding: 25px 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .footer-copyright {
+      color: var(--gray);
+      font-size: 0.9rem;
+    }
+
+    .footer-legal {
+      display: flex;
+      gap: 20px;
+    }
+
+    .footer-legal a {
+      color: var(--gray);
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: var(--transition);
+    }
+
+    .footer-legal a:hover {
+      color: var(--light);
+    }
+
+    /* Decorative Elements */
+    .dark-footer::before {
+      content: '';
+      position: absolute;
+      top: -100px;
+      right: -100px;
+      width: 300px;
+      height: 300px;
+      background: radial-gradient(circle, rgba(37, 99, 235, 0.1) 0%, transparent 70%);
+      z-index: 1;
+    }
+
+    /* Responsive Styles */
+    @media (max-width: 768px) {
+      .dark-footer {
+        padding: 60px 0 0;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+      }
+
+      .footer-bottom {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+      }
+
+      .footer-legal {
+        gap: 15px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+
+  <script>
+    // Simple animation for footer elements
+    document.addEventListener('DOMContentLoaded', function () {
+      const footer = document.querySelector('.dark-footer');
+      const footerCols = document.querySelectorAll('.footer-col');
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry, index) => {
+          if (entry.isIntersecting) {
+            footerCols.forEach((col, i) => {
+              setTimeout(() => {
+                col.style.opacity = '1';
+                col.style.transform = 'translateY(0)';
+              }, i * 100);
+            });
+          }
+        });
+      }, { threshold: 0.1 });
+
+      footerCols.forEach(col => {
+        col.style.opacity = '0';
+        col.style.transform = 'translateY(20px)';
+        col.style.transition = 'all 0.5s ease-out';
+      });
+
+      observer.observe(footer);
+    });
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <style>
+    /* Modern Portfolio Styles */
+    .portfolio-modern {
+      position: relative;
+      padding: 8rem 0;
+      background: linear-gradient(to bottom, #0f172a, #020617);
+      color: #f8fafc;
+      overflow: hidden;
+    }
+
+    .bg-shape {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(100px);
+      opacity: 0.05;
+      z-index: 0;
+    }
+
+    .shape-1 {
+      width: 400px;
+      height: 400px;
+      background: linear-gradient(135deg, #2563eb, #3b82f6);
+      top: -100px;
+      left: -100px;
+    }
+
+    .shape-2 {
+      width: 600px;
+      height: 600px;
+      background: linear-gradient(135deg, #7c3aed, #8b5cf6);
+      bottom: -200px;
+      right: -100px;
+    }
+
+    .container {
+      position: relative;
+      z-index: 1;
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 4rem;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .section-label {
+      display: inline-block;
+      color: #f59e0b;
+      font-weight: 600;
+      letter-spacing: 3px;
+      margin-bottom: 1rem;
+      text-transform: uppercase;
+      font-size: 0.9rem;
+    }
+
+    .section-header h2 {
+      font-size: 3rem;
+      font-weight: 700;
+      line-height: 1.2;
+      margin-bottom: 1.5rem;
+    }
+
+    .section-description {
+      font-size: 1.1rem;
+      opacity: 0.8;
+      line-height: 1.6;
+    }
+
+    /* Project Cards */
+    .project-showcase {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 2.5rem;
+      margin-bottom: 4rem;
+    }
+
+    .project-card {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 20px;
+      overflow: hidden;
+      transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+      position: relative;
+      z-index: 1;
+    }
+
+    .project-card::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(37, 99, 235, 0.1), rgba(124, 58, 237, 0.1));
+      opacity: 0;
+      transition: opacity 0.4s ease;
+      z-index: -1;
+    }
+
+    .project-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+      border-color: rgba(255, 255, 255, 0.15);
+    }
+
+    .project-card:hover::before {
+      opacity: 1;
+    }
+
+    /* Project Media */
+    .project-media {
+      position: relative;
+      height: 280px;
+      overflow: hidden;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .slider {
+      display: flex;
+      height: 100%;
+      transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .slide {
+      min-width: 100%;
+      position: relative;
+    }
+
+    .slide img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s ease;
+    }
+
+    .project-card:hover .slide img {
+      transform: scale(1.02);
+    }
+
+    /* Slider Navigation */
+    .slider-nav {
+      position: absolute;
+      bottom: 20px;
+      left: 0;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
+      padding: 0 20px;
+      z-index: 2;
+    }
+
+    .slider-nav button {
+      width: 40px;
+      height: 40px;
+      background: rgba(0, 0, 0, 0.6);
+      backdrop-filter: blur(5px);
+      border: none;
+      border-radius: 50%;
+      color: white;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      transform: translateY(10px);
+      transition: all 0.3s ease;
+    }
+
+    .project-card:hover .slider-nav button {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .slider-nav button:hover {
+      background: #2563eb;
+      transform: scale(1.1) translateY(0);
+    }
+
+    .dots {
+      display: flex;
+      gap: 8px;
+      background: rgba(0, 0, 0, 0.4);
+      backdrop-filter: blur(5px);
+      padding: 6px 12px;
+      border-radius: 20px;
+    }
+
+    .dots .dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.3);
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .dots .dot.active {
+      background: #2563eb;
+      transform: scale(1.3);
+    }
+
+    /* Project Info */
+    .project-info {
+      padding: 2rem;
+    }
+
+    .meta {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 0.8rem;
+      font-size: 0.9rem;
+      color: rgba(255, 255, 255, 0.7);
+    }
+
+    .project-info h3 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      font-weight: 600;
+    }
+
+    .project-excerpt {
+      font-size: 0.95rem;
+      line-height: 1.6;
+      color: rgba(255, 255, 255, 0.7);
+      margin-bottom: 1.5rem;
+    }
+
+    .project-actions {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .view-link {
+      color: #f8fafc;
+      text-decoration: none;
+      font-weight: 500;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: all 0.3s ease;
+      position: relative;
+      padding: 0.5rem 0;
+    }
+
+    .view-link:hover {
+      color: #3b82f6;
+    }
+
+    .view-link::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: #3b82f6;
+      transition: width 0.3s ease;
+    }
+
+    .view-link:hover::after {
+      width: 100%;
+    }
+
+    .view-link[data-action="quick-view"] {
+      color: #f59e0b;
+    }
+
+    .view-link[data-action="quick-view"]::after {
+      background: #f59e0b;
+    }
+
+    /* Section Footer */
+    .section-footer {
       text-align: center;
     }
-    
-    .footer-legal {
-      gap: 15px;
-    }
-  }
 
-  @media (max-width: 480px) {
-    .footer-grid {
-      grid-template-columns: 1fr;
+    .view-all {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: #f8fafc;
+      text-decoration: none;
+      font-weight: 600;
+      padding: 0.8rem 2rem;
+      border: 2px solid rgba(255, 255, 255, 0.1);
+      border-radius: 50px;
+      transition: all 0.3s ease;
     }
-  }
-</style>
 
-<script>
-  // Simple animation for footer elements
-  document.addEventListener('DOMContentLoaded', function() {
-    const footer = document.querySelector('.dark-footer');
-    const footerCols = document.querySelectorAll('.footer-col');
-    
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry, index) => {
-        if (entry.isIntersecting) {
-          footerCols.forEach((col, i) => {
-            setTimeout(() => {
-              col.style.opacity = '1';
-              col.style.transform = 'translateY(0)';
-            }, i * 100);
-          });
-        }
+    .view-all:hover {
+      background: rgba(255, 255, 255, 0.05);
+      border-color: rgba(255, 255, 255, 0.2);
+      transform: translateY(-3px);
+    }
+
+    /* Project Modal */
+    .project-modal {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.8);
+      backdrop-filter: blur(10px);
+      z-index: 100;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .project-modal.active {
+      display: flex;
+      opacity: 1;
+    }
+
+    .modal-content {
+      background: #0f172a;
+      border-radius: 20px;
+      width: 90%;
+      max-width: 1200px;
+      max-height: 90vh;
+      overflow-y: auto;
+      position: relative;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      box-shadow: 0 30px 60px rgba(0, 0, 0, 0.3);
+      animation: modalFadeIn 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+
+    @keyframes modalFadeIn {
+      from {
+        transform: translateY(20px);
+        opacity: 0;
+      }
+
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    .modal-close {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      width: 40px;
+      height: 40px;
+      background: rgba(255, 255, 255, 0.1);
+      border: none;
+      border-radius: 50%;
+      color: white;
+      font-size: 1.5rem;
+      cursor: pointer;
+      z-index: 10;
+      transition: all 0.3s ease;
+    }
+
+    .modal-close:hover {
+      background: #ef4444;
+      transform: rotate(90deg);
+    }
+
+    .modal-body {
+      padding: 4rem;
+    }
+
+    .modal-body h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .modal-body .project-meta {
+      display: flex;
+      gap: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    .modal-body .project-description {
+      font-size: 1.1rem;
+      line-height: 1.8;
+      margin-bottom: 3rem;
+      max-width: 800px;
+    }
+
+    .modal-gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin-bottom: 3rem;
+    }
+
+    .modal-gallery img {
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s ease;
+    }
+
+    .modal-gallery img:hover {
+      transform: scale(1.02);
+    }
+
+    .project-details {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      margin-bottom: 3rem;
+    }
+
+    .detail-card {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 10px;
+      padding: 1.5rem;
+    }
+
+    .detail-card h4 {
+      font-size: 1rem;
+      color: #f59e0b;
+      margin-bottom: 0.5rem;
+    }
+
+    .detail-card p {
+      font-size: 0.95rem;
+      opacity: 0.9;
+    }
+
+    /* Responsive */
+    @media (max-width: 1024px) {
+      .section-header h2 {
+        font-size: 2.5rem;
+      }
+
+      .modal-body {
+        padding: 3rem;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .portfolio-modern {
+        padding: 6rem 0;
+      }
+
+      .section-header h2 {
+        font-size: 2rem;
+      }
+
+      .project-media {
+        height: 240px;
+      }
+
+      .project-showcase {
+        grid-template-columns: 1fr;
+      }
+
+      .modal-body {
+        padding: 2rem;
+      }
+
+      .modal-gallery {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .project-actions {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+      }
+
+      .modal-body {
+        padding: 1.5rem;
+      }
+
+      .modal-body h2 {
+        font-size: 1.8rem;
+      }
+
+      .modal-body .project-meta {
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+    }
+  </style>
+
+  <script>
+    // Initialize all sliders
+    document.querySelectorAll('.slider').forEach(slider => {
+      const slides = slider.querySelectorAll('.slide');
+      const prevBtn = slider.closest('.project-media').querySelector('.prev');
+      const nextBtn = slider.closest('.project-media').querySelector('.next');
+      const dotsContainer = slider.closest('.project-media').querySelector('.dots');
+
+      let currentIndex = 0;
+      const slideCount = slides.length;
+
+      // Create dots
+      slides.forEach((_, index) => {
+        const dot = document.createElement('div');
+        dot.classList.add('dot');
+        if (index === 0) dot.classList.add('active');
+        dot.addEventListener('click', () => {
+          goToSlide(index);
+        });
+        dotsContainer.appendChild(dot);
       });
-    }, { threshold: 0.1 });
-    
-    footerCols.forEach(col => {
-      col.style.opacity = '0';
-      col.style.transform = 'translateY(20px)';
-      col.style.transition = 'all 0.5s ease-out';
+
+      const dots = dotsContainer.querySelectorAll('.dot');
+
+      // Update slider
+      function updateSlider() {
+        slider.style.transform = `translateX(-${currentIndex * 100}%)`;
+
+        // Update dots
+        dots.forEach((dot, idx) => {
+          dot.classList.toggle('active', idx === currentIndex);
+        });
+      }
+
+      // Go to specific slide
+      function goToSlide(index) {
+        currentIndex = (index + slideCount) % slideCount;
+        updateSlider();
+      }
+
+      // Next slide
+      function nextSlide() {
+        goToSlide(currentIndex + 1);
+      }
+
+      // Previous slide
+      function prevSlide() {
+        goToSlide(currentIndex - 1);
+      }
+
+      // Event listeners
+      nextBtn.addEventListener('click', nextSlide);
+      prevBtn.addEventListener('click', prevSlide);
+
+      // Auto-advance (optional)
+      let slideInterval = setInterval(nextSlide, 5000);
+
+      // Pause on hover
+      slider.closest('.project-card').addEventListener('mouseenter', () => {
+        clearInterval(slideInterval);
+      });
+
+      slider.closest('.project-card').addEventListener('mouseleave', () => {
+        slideInterval = setInterval(nextSlide, 5000);
+      });
     });
-    
-    observer.observe(footer);
-  });
-</script>
 
+    // Project Modal functionality
+    const modal = document.getElementById('projectModal');
+    const modalContent = modal.querySelector('.modal-content');
+    const modalBody = modal.querySelector('.modal-body');
+    const closeModal = modal.querySelector('.modal-close');
 
+    // Sample project data (in a real app, this would come from an API)
+    const projects = {
+      gabi: {
+        title: "GABI BRAND GUIDELINE",
+        category: "Brand Identity",
+        year: "2025",
+        description:
+          "Crafted a complete brand identity system for Gabi, a sustainable fashion startup committed to eco-friendly materials and ethical practices. The brand guidelines cover logo usage, typography, color systems, imagery style, and consistent application across digital platforms, print materials, and product packaging.",
+        details: {
+          Client: "Gabi Sustainable Fashion",
+          Services: "Brand Strategy, Visual Identity, Brand Guidelines",
+          Deliverables:
+            "Logo System, Color Palette, Typography, Photography Guidelines, Stationery, Packaging",
+          Duration: "8 weeks",
+        },
+        images: [
+          "images/portfolio/giba/gabi logo.avif",
+          "images/portfolio/giba/gabi landing page.avif",
+          "images/portfolio/giba/gabi megazine mockup.avif",
+          "images/portfolio/giba/gabi brand guideline final option1-02.avif",
+        ],
+      },
+      elysium: {
+        title: "PURE BLISS SPA",
+        category: "Brand Identity",
+        year: "2025",
+        description:
+          "Developed a refined brand identity for Pure Bliss Spa, emphasizing serenity, self-care, and elegance. The branding features a calming color palette, organic forms, and a luxurious tone across all touchpoints, including business cards, logo designs, and promotional materials.",
+        details: {
+          Client: "Pure Bliss Spa",
+          Services: "Visual Identity, Brand Design, Stationery",
+          Platform: "Print & Digital",
+          Duration: "8 weeks",
+        },
+        images: [
+          "images/portfolio/PURE BLISS SPA/blissful spa color logo copy.avif",
+          "images/portfolio/PURE BLISS SPA/blissful spa color logo.avif",
+          "images/portfolio/PURE BLISS SPA/pure bliss spa Business_Card_Mockup_3.avif",
+        ],
+      },
+      skincare: {
+        title: "COSTAL BREEZE",
+        category: "Brand Identity",
+        year: "2024",
+        description:
+          "Designed premium eco-conscious packaging for Costal Breeze, an organic skincare brand. The solution features recyclable materials, elegant minimalist typography, and tactile embossing—combining luxury with sustainability to elevate the unboxing experience.",
+        details: {
+          Client: "Pure Elements Skincare",
+          Materials: "Recycled Paper, Soy-based Inks",
+          Awards: "2024 Sustainable Design Award",
+          Features: "Biodegradable, Refillable Containers",
+          Duration: "8 weeks",
+        },
+        images: [
+          "images/portfolio/Costal Breeze/Costal Breeze.avif",
+          "images/portfolio/Costal Breeze/Costal Breeze.avif",
+        ],
+      },
+    };
 
+    // Open modal with project details
+    document.querySelectorAll('[data-action="quick-view"], .view-link:not([data-action])').forEach(link => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        const projectCard = link.closest('.project-card');
+        const projectId = projectCard.dataset.project;
+        const project = projects[projectId];
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<style>
-/* Modern Portfolio Styles */
-.portfolio-modern {
-  position: relative;
-  padding: 8rem 0;
-  background: linear-gradient(to bottom, #0f172a, #020617);
-  color: #f8fafc;
-  overflow: hidden;
-}
-
-.bg-shape {
-  position: absolute;
-  border-radius: 50%;
-  filter: blur(100px);
-  opacity: 0.05;
-  z-index: 0;
-}
-.shape-1 {
-  width: 400px;
-  height: 400px;
-  background: linear-gradient(135deg, #2563eb, #3b82f6);
-  top: -100px;
-  left: -100px;
-}
-.shape-2 {
-  width: 600px;
-  height: 600px;
-  background: linear-gradient(135deg, #7c3aed, #8b5cf6);
-  bottom: -200px;
-  right: -100px;
-}
-
-.container {
-  position: relative;
-  z-index: 1;
-  max-width: 1400px;
-  margin: 0 auto;
-  padding: 0 2rem;
-}
-
-.section-header {
-  text-align: center;
-  margin-bottom: 4rem;
-  max-width: 700px;
-  margin-left: auto;
-  margin-right: auto;
-}
-.section-label {
-  display: inline-block;
-  color: #f59e0b;
-  font-weight: 600;
-  letter-spacing: 3px;
-  margin-bottom: 1rem;
-  text-transform: uppercase;
-  font-size: 0.9rem;
-}
-.section-header h2 {
-  font-size: 3rem;
-  font-weight: 700;
-  line-height: 1.2;
-  margin-bottom: 1.5rem;
-}
-.section-description {
-  font-size: 1.1rem;
-  opacity: 0.8;
-  line-height: 1.6;
-}
-
-/* Project Cards */
-.project-showcase {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 2.5rem;
-  margin-bottom: 4rem;
-}
-.project-card {
-  background: rgba(255,255,255,0.03);
-  border: 1px solid rgba(255,255,255,0.08);
-  border-radius: 20px;
-  overflow: hidden;
-  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-  position: relative;
-  z-index: 1;
-}
-.project-card::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(135deg, rgba(37,99,235,0.1), rgba(124,58,237,0.1));
-  opacity: 0;
-  transition: opacity 0.4s ease;
-  z-index: -1;
-}
-.project-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 25px 50px rgba(0,0,0,0.3);
-  border-color: rgba(255,255,255,0.15);
-}
-.project-card:hover::before {
-  opacity: 1;
-}
-
-/* Project Media */
-.project-media {
-  position: relative;
-  height: 280px;
-  overflow: hidden;
-  border-bottom: 1px solid rgba(255,255,255,0.08);
-}
-.slider {
-  display: flex;
-  height: 100%;
-  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
-}
-.slide {
-  min-width: 100%;
-  position: relative;
-}
-.slide img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.6s ease;
-}
-.project-card:hover .slide img {
-  transform: scale(1.02);
-}
-
-/* Slider Navigation */
-.slider-nav {
-  position: absolute;
-  bottom: 20px;
-  left: 0;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 1rem;
-  padding: 0 20px;
-  z-index: 2;
-}
-.slider-nav button {
-  width: 40px;
-  height: 40px;
-  background: rgba(0,0,0,0.6);
-  backdrop-filter: blur(5px);
-  border: none;
-  border-radius: 50%;
-  color: white;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  opacity: 0;
-  transform: translateY(10px);
-  transition: all 0.3s ease;
-}
-.project-card:hover .slider-nav button {
-  opacity: 1;
-  transform: translateY(0);
-}
-.slider-nav button:hover {
-  background: #2563eb;
-  transform: scale(1.1) translateY(0);
-}
-.dots {
-  display: flex;
-  gap: 8px;
-  background: rgba(0,0,0,0.4);
-  backdrop-filter: blur(5px);
-  padding: 6px 12px;
-  border-radius: 20px;
-}
-.dots .dot {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: rgba(255,255,255,0.3);
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-.dots .dot.active {
-  background: #2563eb;
-  transform: scale(1.3);
-}
-
-/* Project Info */
-.project-info {
-  padding: 2rem;
-}
-.meta {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 0.8rem;
-  font-size: 0.9rem;
-  color: rgba(255,255,255,0.7);
-}
-.project-info h3 {
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
-  font-weight: 600;
-}
-.project-excerpt {
-  font-size: 0.95rem;
-  line-height: 1.6;
-  color: rgba(255,255,255,0.7);
-  margin-bottom: 1.5rem;
-}
-.project-actions {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.view-link {
-  color: #f8fafc;
-  text-decoration: none;
-  font-weight: 500;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  transition: all 0.3s ease;
-  position: relative;
-  padding: 0.5rem 0;
-}
-.view-link:hover {
-  color: #3b82f6;
-}
-.view-link::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 0;
-  height: 2px;
-  background: #3b82f6;
-  transition: width 0.3s ease;
-}
-.view-link:hover::after {
-  width: 100%;
-}
-.view-link[data-action="quick-view"] {
-  color: #f59e0b;
-}
-.view-link[data-action="quick-view"]::after {
-  background: #f59e0b;
-}
-
-/* Section Footer */
-.section-footer {
-  text-align: center;
-}
-.view-all {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  color: #f8fafc;
-  text-decoration: none;
-  font-weight: 600;
-  padding: 0.8rem 2rem;
-  border: 2px solid rgba(255,255,255,0.1);
-  border-radius: 50px;
-  transition: all 0.3s ease;
-}
-.view-all:hover {
-  background: rgba(255,255,255,0.05);
-  border-color: rgba(255,255,255,0.2);
-  transform: translateY(-3px);
-}
-
-/* Project Modal */
-.project-modal {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0,0,0,0.8);
-  backdrop-filter: blur(10px);
-  z-index: 100;
-  display: none;
-  align-items: center;
-  justify-content: center;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-.project-modal.active {
-  display: flex;
-  opacity: 1;
-}
-.modal-content {
-  background: #0f172a;
-  border-radius: 20px;
-  width: 90%;
-  max-width: 1200px;
-  max-height: 90vh;
-  overflow-y: auto;
-  position: relative;
-  border: 1px solid rgba(255,255,255,0.1);
-  box-shadow: 0 30px 60px rgba(0,0,0,0.3);
-  animation: modalFadeIn 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-}
-@keyframes modalFadeIn {
-  from {
-    transform: translateY(20px);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-.modal-close {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  width: 40px;
-  height: 40px;
-  background: rgba(255,255,255,0.1);
-  border: none;
-  border-radius: 50%;
-  color: white;
-  font-size: 1.5rem;
-  cursor: pointer;
-  z-index: 10;
-  transition: all 0.3s ease;
-}
-.modal-close:hover {
-  background: #ef4444;
-  transform: rotate(90deg);
-}
-.modal-body {
-  padding: 4rem;
-}
-.modal-body h2 {
-  font-size: 2.5rem;
-  margin-bottom: 1.5rem;
-}
-.modal-body .project-meta {
-  display: flex;
-  gap: 2rem;
-  margin-bottom: 2rem;
-}
-.modal-body .project-description {
-  font-size: 1.1rem;
-  line-height: 1.8;
-  margin-bottom: 3rem;
-  max-width: 800px;
-}
-.modal-gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
-  margin-bottom: 3rem;
-}
-.modal-gallery img {
-  width: 100%;
-  border-radius: 10px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-  transition: transform 0.3s ease;
-}
-.modal-gallery img:hover {
-  transform: scale(1.02);
-}
-.project-details {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
-  margin-bottom: 3rem;
-}
-.detail-card {
-  background: rgba(255,255,255,0.03);
-  border: 1px solid rgba(255,255,255,0.08);
-  border-radius: 10px;
-  padding: 1.5rem;
-}
-.detail-card h4 {
-  font-size: 1rem;
-  color: #f59e0b;
-  margin-bottom: 0.5rem;
-}
-.detail-card p {
-  font-size: 0.95rem;
-  opacity: 0.9;
-}
-
-/* Responsive */
-@media (max-width: 1024px) {
-  .section-header h2 {
-    font-size: 2.5rem;
-  }
-  .modal-body {
-    padding: 3rem;
-  }
-}
-@media (max-width: 768px) {
-  .portfolio-modern {
-    padding: 6rem 0;
-  }
-  .section-header h2 {
-    font-size: 2rem;
-  }
-  .project-media {
-    height: 240px;
-  }
-  .project-showcase {
-    grid-template-columns: 1fr;
-  }
-  .modal-body {
-    padding: 2rem;
-  }
-  .modal-gallery {
-    grid-template-columns: 1fr;
-  }
-}
-@media (max-width: 480px) {
-  .project-actions {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 1rem;
-  }
-  .modal-body {
-    padding: 1.5rem;
-  }
-  .modal-body h2 {
-    font-size: 1.8rem;
-  }
-  .modal-body .project-meta {
-    flex-direction: column;
-    gap: 0.5rem;
-  }
-}
-</style>
-
-<script>
-// Initialize all sliders
-document.querySelectorAll('.slider').forEach(slider => {
-  const slides = slider.querySelectorAll('.slide');
-  const prevBtn = slider.closest('.project-media').querySelector('.prev');
-  const nextBtn = slider.closest('.project-media').querySelector('.next');
-  const dotsContainer = slider.closest('.project-media').querySelector('.dots');
-  
-  let currentIndex = 0;
-  const slideCount = slides.length;
-  
-  // Create dots
-  slides.forEach((_, index) => {
-    const dot = document.createElement('div');
-    dot.classList.add('dot');
-    if (index === 0) dot.classList.add('active');
-    dot.addEventListener('click', () => {
-      goToSlide(index);
-    });
-    dotsContainer.appendChild(dot);
-  });
-  
-  const dots = dotsContainer.querySelectorAll('.dot');
-  
-  // Update slider
-  function updateSlider() {
-    slider.style.transform = `translateX(-${currentIndex * 100}%)`;
-    
-    // Update dots
-    dots.forEach((dot, idx) => {
-      dot.classList.toggle('active', idx === currentIndex);
-    });
-  }
-  
-  // Go to specific slide
-  function goToSlide(index) {
-    currentIndex = (index + slideCount) % slideCount;
-    updateSlider();
-  }
-  
-  // Next slide
-  function nextSlide() {
-    goToSlide(currentIndex + 1);
-  }
-  
-  // Previous slide
-  function prevSlide() {
-    goToSlide(currentIndex - 1);
-  }
-  
-  // Event listeners
-  nextBtn.addEventListener('click', nextSlide);
-  prevBtn.addEventListener('click', prevSlide);
-  
-  // Auto-advance (optional)
-  let slideInterval = setInterval(nextSlide, 5000);
-  
-  // Pause on hover
-  slider.closest('.project-card').addEventListener('mouseenter', () => {
-    clearInterval(slideInterval);
-  });
-  
-  slider.closest('.project-card').addEventListener('mouseleave', () => {
-    slideInterval = setInterval(nextSlide, 5000);
-  });
-});
-
-// Project Modal functionality
-const modal = document.getElementById('projectModal');
-const modalContent = modal.querySelector('.modal-content');
-const modalBody = modal.querySelector('.modal-body');
-const closeModal = modal.querySelector('.modal-close');
-
-// Sample project data (in a real app, this would come from an API)
-const projects = {
-  gabi: {
-    title: "GABI BRAND GUIDELINE",
-    category: "Brand Identity",
-    year: "2025",
-    description:
-      "Crafted a complete brand identity system for Gabi, a sustainable fashion startup committed to eco-friendly materials and ethical practices. The brand guidelines cover logo usage, typography, color systems, imagery style, and consistent application across digital platforms, print materials, and product packaging.",
-    details: {
-      Client: "Gabi Sustainable Fashion",
-      Services: "Brand Strategy, Visual Identity, Brand Guidelines",
-      Deliverables:
-        "Logo System, Color Palette, Typography, Photography Guidelines, Stationery, Packaging",
-      Duration: "8 weeks",
-    },
-    images: [
-      "images/portfolio/giba/gabi logo.avif",
-      "images/portfolio/giba/gabi landing page.avif",
-      "images/portfolio/giba/gabi megazine mockup.avif",
-      "images/portfolio/giba/gabi brand guideline final option1-02.avif",
-    ],
-  },
-  elysium: {
-    title: "PURE BLISS SPA",
-    category: "Brand Identity",
-    year: "2025",
-    description:
-      "Developed a refined brand identity for Pure Bliss Spa, emphasizing serenity, self-care, and elegance. The branding features a calming color palette, organic forms, and a luxurious tone across all touchpoints, including business cards, logo designs, and promotional materials.",
-    details: {
-      Client: "Pure Bliss Spa",
-      Services: "Visual Identity, Brand Design, Stationery",
-      Platform: "Print & Digital",
-       Duration: "8 weeks",
-    },
-    images: [
-      "images/portfolio/PURE BLISS SPA/blissful spa color logo copy.avif",
-      "images/portfolio/PURE BLISS SPA/blissful spa color logo.avif",
-      "images/portfolio/PURE BLISS SPA/pure bliss spa Business_Card_Mockup_3.avif",
-    ],
-  },
-  skincare: {
-    title: "COSTAL BREEZE",
-    category: "Brand Identity",
-    year: "2024",
-    description:
-      "Designed premium eco-conscious packaging for Costal Breeze, an organic skincare brand. The solution features recyclable materials, elegant minimalist typography, and tactile embossing—combining luxury with sustainability to elevate the unboxing experience.",
-    details: {
-      Client: "Pure Elements Skincare",
-      Materials: "Recycled Paper, Soy-based Inks",
-      Awards: "2024 Sustainable Design Award",
-      Features: "Biodegradable, Refillable Containers",
-        Duration: "8 weeks",
-    },
-    images: [
-      "images/portfolio/Costal Breeze/Costal Breeze.avif",
-      "images/portfolio/Costal Breeze/Costal Breeze.avif",
-    ],
-  },
-};
-
-// Open modal with project details
-document.querySelectorAll('[data-action="quick-view"], .view-link:not([data-action])').forEach(link => {
-  link.addEventListener('click', (e) => {
-    e.preventDefault();
-    const projectCard = link.closest('.project-card');
-    const projectId = projectCard.dataset.project;
-    const project = projects[projectId];
-    
-    // Build modal content
-    let html = `
+        // Build modal content
+        let html = `
       <h2>${project.title}</h2>
       <div class="project-meta">
         <span class="category">${project.category}</span>
@@ -1974,324 +2032,325 @@ document.querySelectorAll('[data-action="quick-view"], .view-link:not([data-acti
       </div>
       <div class="modal-gallery">
     `;
-    
-    // Add images
-    project.images.forEach(img => {
-      html += `<img src="${img}" alt="${project.title}">`;
-    });
-    
-    html += `</div><div class="project-details">`;
-    
-    // Add details
-    for (const [key, value] of Object.entries(project.details)) {
-      html += `
+
+        // Add images
+        project.images.forEach(img => {
+          html += `<img src="${img}" alt="${project.title}">`;
+        });
+
+        html += `</div><div class="project-details">`;
+
+        // Add details
+        for (const [key, value] of Object.entries(project.details)) {
+          html += `
         <div class="detail-card">
           <h4>${key}</h4>
           <p>${value}</p>
         </div>
       `;
-    }
-    
-    html += `</div>`;
-    
-    modalBody.innerHTML = html;
-    modal.classList.add('active');
-    document.body.style.overflow = 'hidden';
-  });
-});
+        }
 
-// Close modal
-closeModal.addEventListener('click', () => {
-  modal.classList.remove('active');
-  document.body.style.overflow = 'auto';
-});
+        html += `</div>`;
 
-// Close when clicking outside content
-modal.addEventListener('click', (e) => {
-  if (e.target === modal) {
-    modal.classList.remove('active');
-    document.body.style.overflow = 'auto';
-  }
-});
+        modalBody.innerHTML = html;
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      });
+    });
 
-// Close with Escape key
-document.addEventListener('keydown', (e) => {
-  if (e.key === 'Escape' && modal.classList.contains('active')) {
-    modal.classList.remove('active');
-    document.body.style.overflow = 'auto';
-  }
-});
-</script>
+    // Close modal
+    closeModal.addEventListener('click', () => {
+      modal.classList.remove('active');
+      document.body.style.overflow = 'auto';
+    });
 
-    <script>
+    // Close when clicking outside content
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) {
+        modal.classList.remove('active');
+        document.body.style.overflow = 'auto';
+      }
+    });
 
-function typeProjects() {
-  const currentText = projectTypes[typeIndex];
-  
-  if (isDeleting) {
-    typingElement.textContent = currentText.substring(0, charIndex - 1);
-    charIndex--;
-  } else {
-    typingElement.textContent = currentText.substring(0, charIndex + 1);
-    charIndex++;
-  }
+    // Close with Escape key
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && modal.classList.contains('active')) {
+        modal.classList.remove('active');
+        document.body.style.overflow = 'auto';
+      }
+    });
+  </script>
 
-  if (!isDeleting && charIndex === currentText.length) {
-    isDeleting = true;
-    setTimeout(typeProjects, 1500);
-  } else if (isDeleting && charIndex === 0) {
-    isDeleting = false;
-    typeIndex = (typeIndex + 1) % projectTypes.length;
-    setTimeout(typeProjects, 500);
-  } else {
-    setTimeout(typeProjects, isDeleting ? 50 : 100);
-  }
-}
+  <script>
 
-// Initialize typing animation
-document.addEventListener('DOMContentLoaded', typeProjects);
+    function typeProjects() {
+      const currentText = projectTypes[typeIndex];
 
-// Magnetic button effect
-const magneticButtons = document.querySelectorAll('.magnetic');
-magneticButtons.forEach(button => {
-  button.addEventListener('mousemove', (e) => {
-    const rect = button.getBoundingClientRect();
-    const x = e.clientX - rect.left;
-    const y = e.clientY - rect.top;
-    const centerX = rect.width / 2;
-    const centerY = rect.height / 2;
-    const moveX = (x - centerX) / 10;
-    const moveY = (y - centerY) / 10;
-    
-    button.style.transform = `translate(${moveX}px, ${moveY}px)`;
-  });
-  
-  button.addEventListener('mouseleave', () => {
-    button.style.transform = '';
-  });
-});
-
-// Project filtering
-const filterButtons = document.querySelectorAll('.filter-btn');
-const portfolioItems = document.querySelectorAll('.portfolio-item');
-
-filterButtons.forEach(button => {
-  button.addEventListener('click', () => {
-    // Update active state
-    filterButtons.forEach(btn => btn.classList.remove('active'));
-    button.classList.add('active');
-    
-    const filterValue = button.getAttribute('data-filter');
-    
-    // Filter items
-    portfolioItems.forEach(item => {
-      if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
-        item.style.display = 'block';
-        setTimeout(() => {
-          item.style.opacity = '1';
-          item.style.transform = 'translateY(0)';
-        }, 50);
+      if (isDeleting) {
+        typingElement.textContent = currentText.substring(0, charIndex - 1);
+        charIndex--;
       } else {
-        item.style.opacity = '0';
-        item.style.transform = 'translateY(20px)';
-        setTimeout(() => {
-          item.style.display = 'none';
-        }, 300);
+        typingElement.textContent = currentText.substring(0, charIndex + 1);
+        charIndex++;
       }
-    });
-  });
-});
 
-// Initialize animations on scroll
-document.addEventListener('DOMContentLoaded', () => {
-  const portfolioItems = document.querySelectorAll('.portfolio-item');
-  
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.style.opacity = '1';
-        entry.target.style.transform = 'translateY(0)';
+      if (!isDeleting && charIndex === currentText.length) {
+        isDeleting = true;
+        setTimeout(typeProjects, 1500);
+      } else if (isDeleting && charIndex === 0) {
+        isDeleting = false;
+        typeIndex = (typeIndex + 1) % projectTypes.length;
+        setTimeout(typeProjects, 500);
+      } else {
+        setTimeout(typeProjects, isDeleting ? 50 : 100);
       }
+    }
+
+    // Initialize typing animation
+    document.addEventListener('DOMContentLoaded', typeProjects);
+
+    // Magnetic button effect
+    const magneticButtons = document.querySelectorAll('.magnetic');
+    magneticButtons.forEach(button => {
+      button.addEventListener('mousemove', (e) => {
+        const rect = button.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        const centerX = rect.width / 2;
+        const centerY = rect.height / 2;
+        const moveX = (x - centerX) / 10;
+        const moveY = (y - centerY) / 10;
+
+        button.style.transform = `translate(${moveX}px, ${moveY}px)`;
+      });
+
+      button.addEventListener('mouseleave', () => {
+        button.style.transform = '';
+      });
     });
-  }, { threshold: 0.1 });
-  
-  portfolioItems.forEach(item => {
-    item.style.opacity = '0';
-    item.style.transform = 'translateY(30px)';
-    item.style.transition = 'all 0.6s cubic-bezier(0.16, 1, 0.3, 1)';
-    observer.observe(item);
-  });
-});
-        // Close menu when clicking on links
-        document.querySelectorAll('.nav-links a').forEach(link => {
-            link.addEventListener('click', function() {
-                menuToggle.classList.remove('active');
-                navLinks.classList.remove('active');
-                document.body.style.overflow = '';
-            });
+
+    // Project filtering
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const portfolioItems = document.querySelectorAll('.portfolio-item');
+
+    filterButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        // Update active state
+        filterButtons.forEach(btn => btn.classList.remove('active'));
+        button.classList.add('active');
+
+        const filterValue = button.getAttribute('data-filter');
+
+        // Filter items
+        portfolioItems.forEach(item => {
+          if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
+            item.style.display = 'block';
+            setTimeout(() => {
+              item.style.opacity = '1';
+              item.style.transform = 'translateY(0)';
+            }, 50);
+          } else {
+            item.style.opacity = '0';
+            item.style.transform = 'translateY(20px)';
+            setTimeout(() => {
+              item.style.display = 'none';
+            }, 300);
+          }
         });
-        
-        // Animate skill bars when section comes into view
-        const animateSkills = () => {
-            const skills = document.querySelectorAll('.skill-progress');
-            const aboutSection = document.querySelector('.about-section');
-            
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        skills.forEach(skill => {
-                            skill.style.width = skill.parentElement.previousElementSibling.lastElementChild.textContent;
-                        });
-                        observer.unobserve(entry.target);
-                    }
-                });
-            }, { threshold: 0.2 });
-            
-            observer.observe(aboutSection);
-        };
-        
-        document.addEventListener('DOMContentLoaded', animateSkills);
-    </script>
+      });
+    });
 
-    <script>
-        // Animated counter
-const counters = document.querySelectorAll('.counter');
-const speed = 200;
+    // Initialize animations on scroll
+    document.addEventListener('DOMContentLoaded', () => {
+      const portfolioItems = document.querySelectorAll('.portfolio-item');
 
-counters.forEach(counter => {
-  const target = +counter.parentElement.getAttribute('data-count');
-  const count = +counter.innerText;
-  const increment = target / speed;
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.style.opacity = '1';
+            entry.target.style.transform = 'translateY(0)';
+          }
+        });
+      }, { threshold: 0.1 });
 
-  if (count < target) {
-    counter.innerText = Math.ceil(count + increment);
-    setTimeout(updateCounter, 1);
-  } else {
-    counter.innerText = target + '+';
-  }
-});
+      portfolioItems.forEach(item => {
+        item.style.opacity = '0';
+        item.style.transform = 'translateY(30px)';
+        item.style.transition = 'all 0.6s cubic-bezier(0.16, 1, 0.3, 1)';
+        observer.observe(item);
+      });
+    });
+    // Close menu when clicking on links
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      link.addEventListener('click', function () {
+        menuToggle.classList.remove('active');
+        navLinks.classList.remove('active');
+        document.body.style.overflow = '';
+      });
+    });
 
-// 3D tilt effect
-const profile3d = document.querySelector('.profile3d');
-document.addEventListener('mousemove', (e) => {
-  const x = e.clientX / window.innerWidth;
-  const y = e.clientY / window.innerHeight;
-  
-  profile3d.style.transform = `
+    // Animate skill bars when section comes into view
+    const animateSkills = () => {
+      const skills = document.querySelectorAll('.skill-progress');
+      const aboutSection = document.querySelector('.about-section');
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            skills.forEach(skill => {
+              skill.style.width = skill.parentElement.previousElementSibling.lastElementChild.textContent;
+            });
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.2 });
+
+      observer.observe(aboutSection);
+    };
+
+    document.addEventListener('DOMContentLoaded', animateSkills);
+  </script>
+
+  <script>
+    // Animated counter
+    const counters = document.querySelectorAll('.counter');
+    const speed = 200;
+
+    counters.forEach(counter => {
+      const target = +counter.parentElement.getAttribute('data-count');
+      const count = +counter.innerText;
+      const increment = target / speed;
+
+      if (count < target) {
+        counter.innerText = Math.ceil(count + increment);
+        setTimeout(updateCounter, 1);
+      } else {
+        counter.innerText = target + '+';
+      }
+    });
+
+    // 3D tilt effect
+    const profile3d = document.querySelector('.profile3d');
+    document.addEventListener('mousemove', (e) => {
+      const x = e.clientX / window.innerWidth;
+      const y = e.clientY / window.innerHeight;
+
+      profile3d.style.transform = `
     rotateY(${(x - 0.5) * 15}deg)
     rotateX(${(0.5 - y) * 10}deg)
   `;
-  profile3d.querySelector('.profile-img').style.transform = `
+      profile3d.querySelector('.profile-img').style.transform = `
     scale(1.05)
     translateX(${(x - 0.5) * 10}px)
     translateY(${(0.5 - y) * 5}px)
   `;
-});
-  // Navbar scroll effect
-        window.addEventListener('scroll', function() {
-            const navbar = document.querySelector('.navbar');
-            if (window.scrollY > 50) {
-                navbar.classList.add('scrolled');
-            } else {
-                navbar.classList.remove('scrolled');
-            }
-        });
-        
-        // Mobile menu toggle
-        const menuToggle = document.querySelector('.menu-toggle');
-        const navLinks = document.querySelector('.nav-links');
-        
-        menuToggle.addEventListener('click', function() {
-            this.classList.toggle('active');
-            navLinks.classList.toggle('active');
-        });
-        
-        // Close mobile menu when clicking a link
-        document.querySelectorAll('.nav-links a').forEach(link => {
-            link.addEventListener('click', function() {
-                if (navLinks.classList.contains('active')) {
-                    menuToggle.classList.remove('active');
-                    navLinks.classList.remove('active');
-                }
-            });
-        });
-        
-        // Smooth scrolling for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                
-                const targetId = this.getAttribute('href');
-                const targetElement = document.querySelector(targetId);
-                
-                window.scrollTo({
-                    top: targetElement.offsetTop - 80,
-                    behavior: 'smooth'
-                });
-            });
-        });
-        // Dynamic Typing Effect
-        const professions = [
-            "GRAPHIC DESIGNER",
-            "BRAND SPECIALIST", 
-            "VISUAL ARTIST",
-            "CREATIVE DIRECTOR"
-        ];
-        const professionElement = document.getElementById('profession');
-        let currentProfession = 0;
-        let charIndex = 0;
-        let isDeleting = false;
-        let typingSpeed = 100;
-        
-        function typeProfession() {
-            const currentText = professions[currentProfession];
-            
-            if (isDeleting) {
-                professionElement.textContent = currentText.substring(0, charIndex - 1);
-                charIndex--;
-                typingSpeed = 50;
-            } else {
-                professionElement.textContent = currentText.substring(0, charIndex + 1);
-                charIndex++;
-                typingSpeed = 100;
-            }
-            
-            if (!isDeleting && charIndex === currentText.length) {
-                typingSpeed = 2000;
-                isDeleting = true;
-            } else if (isDeleting && charIndex === 0) {
-                isDeleting = false;
-                currentProfession = (currentProfession + 1) % professions.length;
-                typingSpeed = 500;
-            }
-            
-            setTimeout(typeProfession, typingSpeed);
+    });
+    // Navbar scroll effect
+    window.addEventListener('scroll', function () {
+      const navbar = document.querySelector('.navbar');
+      if (window.scrollY > 50) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+    });
+
+    // Mobile menu toggle
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navLinks = document.querySelector('.nav-links');
+
+    menuToggle.addEventListener('click', function () {
+      this.classList.toggle('active');
+      navLinks.classList.toggle('active');
+    });
+
+    // Close mobile menu when clicking a link
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      link.addEventListener('click', function () {
+        if (navLinks.classList.contains('active')) {
+          menuToggle.classList.remove('active');
+          navLinks.classList.remove('active');
         }
-        
-        // Initialize animations
-        document.addEventListener('DOMContentLoaded', () => {
-            // Start typing effect
-            setTimeout(typeProfession, 1000);
-            
-            // Add parallax effect
-            document.addEventListener('mousemove', (e) => {
-                const x = e.clientX / window.innerWidth;
-                const y = e.clientY / window.innerHeight;
-                const content = document.querySelector('.hero-content');
-                
-                content.style.transform = `
+      });
+    });
+
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        const targetId = this.getAttribute('href');
+        const targetElement = document.querySelector(targetId);
+
+        window.scrollTo({
+          top: targetElement.offsetTop - 80,
+          behavior: 'smooth'
+        });
+      });
+    });
+    // Dynamic Typing Effect
+    const professions = [
+      "GRAPHIC DESIGNER",
+      "BRAND SPECIALIST",
+      "VISUAL ARTIST",
+      "CREATIVE DIRECTOR"
+    ];
+    const professionElement = document.getElementById('profession');
+    let currentProfession = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+    let typingSpeed = 100;
+
+    function typeProfession() {
+      const currentText = professions[currentProfession];
+
+      if (isDeleting) {
+        professionElement.textContent = currentText.substring(0, charIndex - 1);
+        charIndex--;
+        typingSpeed = 50;
+      } else {
+        professionElement.textContent = currentText.substring(0, charIndex + 1);
+        charIndex++;
+        typingSpeed = 100;
+      }
+
+      if (!isDeleting && charIndex === currentText.length) {
+        typingSpeed = 2000;
+        isDeleting = true;
+      } else if (isDeleting && charIndex === 0) {
+        isDeleting = false;
+        currentProfession = (currentProfession + 1) % professions.length;
+        typingSpeed = 500;
+      }
+
+      setTimeout(typeProfession, typingSpeed);
+    }
+
+    // Initialize animations
+    document.addEventListener('DOMContentLoaded', () => {
+      // Start typing effect
+      setTimeout(typeProfession, 1000);
+
+      // Add parallax effect
+      document.addEventListener('mousemove', (e) => {
+        const x = e.clientX / window.innerWidth;
+        const y = e.clientY / window.innerHeight;
+        const content = document.querySelector('.hero-content');
+
+        content.style.transform = `
                     translateX(${x * 20 - 10}px)
                     translateY(${y * 20 - 10}px)
                 `;
-                
-                const planet1 = document.querySelector('.planet-1');
-                const planet2 = document.querySelector('.planet-2');
-                
-                planet1.style.transform = `translate(${x * 40 - 20}px, ${y * 40 - 20}px)`;
-                planet2.style.transform = `translate(${x * -30 + 15}px, ${y * -30 + 15}px)`;
-            });
-        });
-    </script>
-    <link rel="stylesheet" href="script.js">
+
+        const planet1 = document.querySelector('.planet-1');
+        const planet2 = document.querySelector('.planet-2');
+
+        planet1.style.transform = `translate(${x * 40 - 20}px, ${y * 40 - 20}px)`;
+        planet2.style.transform = `translate(${x * -30 + 15}px, ${y * -30 + 15}px)`;
+      });
+    });
+  </script>
+  <link rel="stylesheet" href="script.js">
 </body>
+
 </html>
