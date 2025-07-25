@@ -2,7 +2,7 @@
         const professions = [
             "GRAPHIC DESIGNER",
             "BRAND SPECIALIST", 
-            "VISUAL ARTIST",
+            "PACKAGING DESIGN",
             "CREATIVE DIRECTOR"
         ];
         const professionElement = document.getElementById('profession');
@@ -524,65 +524,7 @@ document.addEventListener('DOMContentLoaded', () => {
       observer.observe(contactSection);
     });
 
-    // FAQ Accordion Functionality
-    document.addEventListener('DOMContentLoaded', function () {
-      const faqItems = document.querySelectorAll('.faq-item');
-
-      faqItems.forEach(item => {
-        const question = item.querySelector('.faq-question');
-
-        question.addEventListener('click', () => {
-          // Close all other items
-          faqItems.forEach(otherItem => {
-            if (otherItem !== item && otherItem.classList.contains('active')) {
-              otherItem.classList.remove('active');
-            }
-          });
-
-          // Toggle current item
-          item.classList.toggle('active');
-        });
-      });
-
-      // Animation on scroll
-      const faqSection = document.querySelector('.faq-section');
-      const faqHeader = document.querySelector('.faq-header');
-      const faqAccordion = document.querySelector('.faq-accordion');
-      const faqCta = document.querySelector('.faq-cta');
-
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            faqHeader.style.opacity = '1';
-            faqHeader.style.transform = 'translateY(0)';
-
-            setTimeout(() => {
-              faqAccordion.style.opacity = '1';
-              faqAccordion.style.transform = 'translateY(0)';
-            }, 200);
-
-            setTimeout(() => {
-              faqCta.style.opacity = '1';
-              faqCta.style.transform = 'translateY(0)';
-            }, 400);
-          }
-        });
-      }, { threshold: 0.1 });
-
-      faqHeader.style.opacity = '0';
-      faqHeader.style.transform = 'translateY(20px)';
-      faqHeader.style.transition = 'all 0.6s ease-out';
-
-      faqAccordion.style.opacity = '0';
-      faqAccordion.style.transform = 'translateY(20px)';
-      faqAccordion.style.transition = 'all 0.6s ease-out 0.2s';
-
-      faqCta.style.opacity = '0';
-      faqCta.style.transform = 'translateY(20px)';
-      faqCta.style.transition = 'all 0.6s ease-out 0.4s';
-
-      observer.observe(faqSection);
-    });
+   
      // Simple animation for footer elements
     document.addEventListener('DOMContentLoaded', function () {
       const footer = document.querySelector('.dark-footer');
@@ -609,3 +551,66 @@ document.addEventListener('DOMContentLoaded', () => {
 
       observer.observe(footer);
     });
+
+       // FAQ Accordion Functionality
+document.addEventListener('DOMContentLoaded', () => {
+  const faqItems = document.querySelectorAll('.faq-item');
+  const faqSection = document.querySelector('.faq-section');
+  const faqHeader = document.querySelector('.faq-header');
+  const faqAccordion = document.querySelector('.faq-accordion');
+  const faqCta = document.querySelector('.faq-cta'); // Optional
+
+  // Accordion toggle
+  faqItems.forEach(item => {
+    const question = item.querySelector('.faq-question');
+    question.addEventListener('click', () => {
+      faqItems.forEach(otherItem => {
+        if (otherItem !== item) {
+          otherItem.classList.remove('active');
+        }
+      });
+      item.classList.toggle('active');
+    });
+  });
+
+  // Scroll-in animation
+  if (faqSection && faqHeader && faqAccordion) {
+    const observer = new IntersectionObserver((entries, obs) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          // Animate Header
+          faqHeader.style.opacity = '1';
+          faqHeader.style.transform = 'translateY(0)';
+
+          // Animate Accordion
+          setTimeout(() => {
+            faqAccordion.style.opacity = '1';
+            faqAccordion.style.transform = 'translateY(0)';
+          }, 200);
+
+          // Animate CTA if it exists
+          if (faqCta) {
+            setTimeout(() => {
+              faqCta.style.opacity = '1';
+              faqCta.style.transform = 'translateY(0)';
+            }, 400);
+          }
+
+          // Stop observing after animation
+          obs.unobserve(faqSection);
+        }
+      });
+    }, { threshold: 0.1 });
+
+    // Initial state before animation
+    [faqHeader, faqAccordion, faqCta].forEach(el => {
+      if (el) {
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(20px)';
+        el.style.transition = 'all 0.6s ease-out';
+      }
+    });
+
+    observer.observe(faqSection);
+  }
+});
